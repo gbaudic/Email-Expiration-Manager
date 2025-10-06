@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title data-i18n="optionsTitle">Settings</title>
+  <link rel="stylesheet" href="options.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1 data-i18n="extensionName">Email Expiration Manager</h1>
+      <p class="subtitle" data-i18n="optionsSubtitle">Configure how expired emails are handled</p>
+    </header>
+
+    <main>
+      <!-- General Settings -->
+      <section class="settings-section">
+        <h2 data-i18n="generalSettings">General Settings</h2>
+        
+        <div class="setting-item">
+          <label class="checkbox-label">
+            <input type="checkbox" id="enabled">
+            <span data-i18n="enableExtension">Enable extension</span>
+          </label>
+          <p class="setting-description" data-i18n="enableExtensionDesc">When disabled, no automatic checks will run</p>
+        </div>
+
+        <div class="setting-item">
+          <label class="checkbox-label">
+            <input type="checkbox" id="dryRun">
+            <span data-i18n="dryRunMode">Dry run mode (simulation)</span>
+          </label>
+          <p class="setting-description" data-i18n="dryRunModeDesc">Only detect expired emails without moving or deleting them</p>
+        </div>
+
+        <div class="setting-item">
+          <label class="checkbox-label">
+            <input type="checkbox" id="showNotifications">
+            <span data-i18n="showNotifications">Show notifications</span>
+          </label>
+          <p class="setting-description" data-i18n="showNotificationsDesc">Display a notification when checks are complete</p>
+        </div>
+
+        <div class="setting-item">
+          <label class="checkbox-label">
+            <input type="checkbox" id="logActions">
+            <span data-i18n="logActions">Enable logging</span>
+          </label>
+          <p class="setting-description" data-i18n="logActionsDesc">Keep a history of all actions performed</p>
+        </div>
+      </section>
+
+      <!-- Action Settings -->
+      <section class="settings-section">
+        <h2 data-i18n="actionSettings">Action Settings</h2>
+        
+        <div class="setting-item">
+          <label for="action" data-i18n="actionLabel">Action for expired emails:</label>
+          <select id="action" class="select-input">
+            <option value="delete" data-i18n="actionDelete">Delete</option>
+            <option value="move" data-i18n="actionMove">Move to folder</option>
+          </select>
+        </div>
+
+        <div class="setting-item" id="permanentDeleteContainer">
+          <label class="checkbox-label">
+            <input type="checkbox" id="permanentDelete">
+            <span data-i18n="permanentDelete">Permanent deletion (skip trash)</span>
+          </label>
+          <p class="setting-description warning-text" data-i18n="permanentDeleteDesc">⚠️ Warning: Emails will be permanently deleted and cannot be recovered</p>
+        </div>
+
+        <div class="setting-item" id="targetFolderContainer">
+          <label for="targetFolder" data-i18n="targetFolderLabel">Target folder:</label>
+          <select id="targetFolder" class="select-input">
+            <option value="" data-i18n="selectFolder">-- Select a folder --</option>
+          </select>
+          <button id="refreshFolders" class="button button-secondary" data-i18n="refreshFolders">Refresh folders</button>
+        </div>
+      </section>
+
+      <!-- Check Settings -->
+      <section class="settings-section">
+        <h2 data-i18n="checkSettings">Check Settings</h2>
+        
+        <div class="setting-item">
+          <label class="checkbox-label">
+            <input type="checkbox" id="checkOnStartup">
+            <span data-i18n="checkOnStartup">Check on Thunderbird startup</span>
+          </label>
+        </div>
+
+        <div class="setting-item">
+          <label class="checkbox-label">
+            <input type="checkbox" id="periodicCheck">
+            <span data-i18n="periodicCheck">Enable periodic checks</span>
+          </label>
+        </div>
+
+        <div class="setting-item" id="intervalContainer">
+          <label for="checkInterval" data-i18n="checkIntervalLabel">Check every (minutes):</label>
+          <input type="number" id="checkInterval" min="5" max="1440" class="number-input">
+        </div>
+      </section>
+
+      <!-- Account Selection -->
+      <section class="settings-section">
+        <h2 data-i18n="accountSelection">Account Selection</h2>
+        <p class="setting-description" data-i18n="accountSelectionDesc">Leave empty to check all accounts, or select specific accounts to check</p>
+        
+        <div class="account-list" id="accountList">
+          <p data-i18n="loadingAccounts">Loading accounts...</p>
+        </div>
+        
+        <button id="refreshAccountList" class="button button-secondary" data-i18n="refreshAccountList">Refresh account list</button>
+      </section>
+
+      <!-- Folder Selection -->
+      <section class="settings-section">
+        <h2 data-i18n="folderSelection">Folder Selection</h2>
+        <p class="setting-description" data-i18n="folderSelectionDesc">Leave empty to check all folders, or select specific folders to check</p>
+        
+        <div class="folder-controls">
+          <button id="selectAllFolders" class="button button-secondary" data-i18n="selectAllFolders">Select all folders</button>
+          <button id="deselectAllFolders" class="button button-secondary" data-i18n="deselectAllFolders">Deselect all folders</button>
+        </div>
+        
+        <div class="folder-list" id="folderList">
+          <p data-i18n="loadingFolders">Loading folders...</p>
+        </div>
+        
+        <button id="refreshFolderList" class="button button-secondary" data-i18n="refreshFolderList">Refresh folder list</button>
+      </section>
+
+      <!-- Logs -->
+      <section class="settings-section">
+        <h2 data-i18n="activityLogs">Activity Logs</h2>
+        
+        <div class="logs-controls">
+          <button id="clearLogs" class="button button-danger" data-i18n="clearLogs">Clear logs</button>
+          <button id="exportLogs" class="button button-secondary" data-i18n="exportLogs">Export logs</button>
+        </div>
+
+        <div class="logs-container" id="logsContainer">
+          <p data-i18n="noLogs">No logs available</p>
+        </div>
+      </section>
+
+      <!-- Save Button -->
+      <div class="save-container">
+        <button id="save" class="button button-primary" data-i18n="saveSettings">Save Settings</button>
+        <span id="saveStatus" class="save-status"></span>
+      </div>
+    </main>
+  </div>
+
+  <script src="options.js"></script>
+</body>
+</html>

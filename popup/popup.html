@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title data-i18n="extensionName">Email Expiration Manager</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="popup-container">
+    <header>
+      <h1 data-i18n="extensionName">Email Expiration Manager</h1>
+    </header>
+
+    <main>
+      <div class="status-section">
+        <div class="status-item">
+          <span class="status-label" data-i18n="statusLabel">Status:</span>
+          <span id="statusValue" class="status-value">-</span>
+        </div>
+        
+        <div class="status-item">
+          <span class="status-label" data-i18n="lastCheckLabel">Last check:</span>
+          <span id="lastCheckValue" class="status-value">-</span>
+        </div>
+      </div>
+
+      <div class="action-section">
+        <button id="runCheck" class="button button-primary" data-i18n="runCheckNow">
+          Run Check Now
+        </button>
+        
+        <div id="progress" class="progress-container" style="display: none;">
+          <div class="progress-bar">
+            <div class="progress-fill"></div>
+          </div>
+          <p class="progress-text" data-i18n="checkingEmails">Checking emails...</p>
+        </div>
+
+        <div id="results" class="results-container" style="display: none;">
+          <div class="result-item">
+            <span data-i18n="resultChecked">Checked:</span>
+            <strong id="resultChecked">0</strong>
+          </div>
+          <div class="result-item">
+            <span data-i18n="resultExpired">Expired:</span>
+            <strong id="resultExpired">0</strong>
+          </div>
+          <div class="result-item">
+            <span data-i18n="resultProcessed">Processed:</span>
+            <strong id="resultProcessed">0</strong>
+          </div>
+        </div>
+      </div>
+
+      <div class="links-section">
+        <a href="#" id="openOptions" data-i18n="openSettings">Open Settings</a>
+      </div>
+    </main>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

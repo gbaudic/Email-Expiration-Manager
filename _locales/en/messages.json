@@ -1,0 +1,316 @@
+{
+  "extensionName": {
+    "message": "Email Expiration Manager",
+    "description": "Name of the extension"
+  },
+  "extensionDescription": {
+    "message": "Automatically manage emails with expiration dates by moving or deleting them when they expire",
+    "description": "Description of the extension"
+  },
+  "optionsTitle": {
+    "message": "Email Expiration Manager - Settings",
+    "description": "Title for the options page"
+  },
+  "optionsSubtitle": {
+    "message": "Configure how expired emails are handled",
+    "description": "Subtitle for the options page"
+  },
+  "generalSettings": {
+    "message": "General Settings",
+    "description": "Section title for general settings"
+  },
+  "enableExtension": {
+    "message": "Enable extension",
+    "description": "Label for enable extension checkbox"
+  },
+  "enableExtensionDesc": {
+    "message": "When disabled, no automatic checks will run",
+    "description": "Description for enable extension option"
+  },
+  "dryRunMode": {
+    "message": "Dry run mode (simulation)",
+    "description": "Label for dry run mode checkbox"
+  },
+  "dryRunModeDesc": {
+    "message": "Only detect expired emails without moving or deleting them",
+    "description": "Description for dry run mode"
+  },
+  "showNotifications": {
+    "message": "Show notifications",
+    "description": "Label for show notifications checkbox"
+  },
+  "showNotificationsDesc": {
+    "message": "Display a notification when checks are complete",
+    "description": "Description for show notifications option"
+  },
+  "logActions": {
+    "message": "Enable logging",
+    "description": "Label for log actions checkbox"
+  },
+  "logActionsDesc": {
+    "message": "Keep a history of all actions performed",
+    "description": "Description for log actions option"
+  },
+  "actionSettings": {
+    "message": "Action Settings",
+    "description": "Section title for action settings"
+  },
+  "actionLabel": {
+    "message": "Action for expired emails:",
+    "description": "Label for action selection"
+  },
+  "actionDelete": {
+    "message": "Delete",
+    "description": "Option to delete expired emails"
+  },
+  "actionMove": {
+    "message": "Move to folder",
+    "description": "Option to move expired emails"
+  },
+  "permanentDelete": {
+    "message": "Permanent deletion (skip trash)",
+    "description": "Option to permanently delete emails"
+  },
+  "permanentDeleteDesc": {
+    "message": "⚠️ Warning: Emails will be permanently deleted and cannot be recovered",
+    "description": "Warning for permanent deletion option"
+  },
+  "targetFolderLabel": {
+    "message": "Target folder:",
+    "description": "Label for target folder selection"
+  },
+  "selectFolder": {
+    "message": "-- Select a folder --",
+    "description": "Placeholder for folder selection"
+  },
+  "refreshFolders": {
+    "message": "Refresh folders",
+    "description": "Button to refresh folder list"
+  },
+  "checkSettings": {
+    "message": "Check Settings",
+    "description": "Section title for check settings"
+  },
+  "checkOnStartup": {
+    "message": "Check on Thunderbird startup",
+    "description": "Label for check on startup option"
+  },
+  "periodicCheck": {
+    "message": "Enable periodic checks",
+    "description": "Label for periodic check option"
+  },
+  "checkIntervalLabel": {
+    "message": "Check every (minutes):",
+    "description": "Label for check interval"
+  },
+  "accountSelection": {
+    "message": "Account Selection",
+    "description": "Section title for account selection"
+  },
+  "accountSelectionDesc": {
+    "message": "Leave empty to check all accounts, or select specific accounts to check",
+    "description": "Description for account selection"
+  },
+  "loadingAccounts": {
+    "message": "Loading accounts...",
+    "description": "Loading message for accounts"
+  },
+  "noAccountsFound": {
+    "message": "No accounts found",
+    "description": "Message when no accounts are found"
+  },
+  "refreshAccountList": {
+    "message": "Refresh account list",
+    "description": "Button to refresh account list"
+  },
+  "folderSelection": {
+    "message": "Folder Selection",
+    "description": "Section title for folder selection"
+  },
+  "folderSelectionDesc": {
+    "message": "Leave empty to check all folders, or select specific folders to check",
+    "description": "Description for folder selection"
+  },
+  "selectAllFolders": {
+    "message": "Select all folders",
+    "description": "Button to select all folders"
+  },
+  "deselectAllFolders": {
+    "message": "Deselect all folders",
+    "description": "Button to deselect all folders"
+  },
+  "loadingFolders": {
+    "message": "Loading folders...",
+    "description": "Loading message for folders"
+  },
+  "noFoldersFound": {
+    "message": "No folders found",
+    "description": "Message when no folders are found"
+  },
+  "refreshFolderList": {
+    "message": "Refresh folder list",
+    "description": "Button to refresh folder list"
+  },
+  "activityLogs": {
+    "message": "Activity Logs",
+    "description": "Section title for activity logs"
+  },
+  "clearLogs": {
+    "message": "Clear logs",
+    "description": "Button to clear logs"
+  },
+  "exportLogs": {
+    "message": "Export logs",
+    "description": "Button to export logs"
+  },
+  "noLogs": {
+    "message": "No logs available",
+    "description": "Message when no logs exist"
+  },
+  "logAction": {
+    "message": "Action",
+    "description": "Log field: action type"
+  },
+  "logChecked": {
+    "message": "Emails checked",
+    "description": "Log field: emails checked"
+  },
+  "logExpired": {
+    "message": "Expired found",
+    "description": "Log field: expired emails found"
+  },
+  "logProcessed": {
+    "message": "Processed",
+    "description": "Log field: emails processed"
+  },
+  "logErrors": {
+    "message": "Errors",
+    "description": "Log field: errors"
+  },
+  "saveSettings": {
+    "message": "Save Settings",
+    "description": "Button to save settings"
+  },
+  "settingsSaved": {
+    "message": "✓ Settings saved successfully",
+    "description": "Confirmation message for saved settings"
+  },
+  "confirmClearLogs": {
+    "message": "Are you sure you want to clear all logs? This action cannot be undone.",
+    "description": "Confirmation message for clearing logs"
+  },
+  "statusLabel": {
+    "message": "Status",
+    "description": "Label for status in popup"
+  },
+  "lastCheckLabel": {
+    "message": "Last check",
+    "description": "Label for last check time in popup"
+  },
+  "runCheckNow": {
+    "message": "Run Check Now",
+    "description": "Button to run check manually"
+  },
+  "checkingEmails": {
+    "message": "Checking emails...",
+    "description": "Progress message while checking"
+  },
+  "resultChecked": {
+    "message": "Checked",
+    "description": "Result label: emails checked"
+  },
+  "resultExpired": {
+    "message": "Expired",
+    "description": "Result label: expired found"
+  },
+  "resultProcessed": {
+    "message": "Processed",
+    "description": "Result label: emails processed"
+  },
+  "openSettings": {
+    "message": "Open Settings",
+    "description": "Link to open settings page"
+  },
+  "statusEnabled": {
+    "message": "Enabled",
+    "description": "Status: extension is enabled"
+  },
+  "statusDisabled": {
+    "message": "Disabled",
+    "description": "Status: extension is disabled"
+  },
+  "never": {
+    "message": "Never",
+    "description": "Time: never"
+  },
+  "justNow": {
+    "message": "Just now",
+    "description": "Time: just now"
+  },
+  "minutesAgo": {
+    "message": "$1 minutes ago",
+    "description": "Time: X minutes ago",
+    "placeholders": {
+      "1": {
+        "content": "$1",
+        "example": "5"
+      }
+    }
+  },
+  "hoursAgo": {
+    "message": "$1 hours ago",
+    "description": "Time: X hours ago",
+    "placeholders": {
+      "1": {
+        "content": "$1",
+        "example": "2"
+      }
+    }
+  },
+  "daysAgo": {
+    "message": "$1 days ago",
+    "description": "Time: X days ago",
+    "placeholders": {
+      "1": {
+        "content": "$1",
+        "example": "3"
+      }
+    }
+  },
+  "checkFailed": {
+    "message": "Check failed",
+    "description": "Error message when check fails"
+  },
+  "notificationComplete": {
+    "message": "Check complete: $1 of $2 expired emails processed (out of $3 total checked)",
+    "description": "Notification when check is complete",
+    "placeholders": {
+      "1": {
+        "content": "$1",
+        "example": "5"
+      },
+      "2": {
+        "content": "$2",
+        "example": "10"
+      },
+      "3": {
+        "content": "$3",
+        "example": "100"
+      }
+    }
+  },
+  "notificationDryRun": {
+    "message": "Dry run complete: $1 expired emails found (out of $2 total checked)",
+    "description": "Notification for dry run",
+    "placeholders": {
+      "1": {
+        "content": "$1",
+        "example": "10"
+      },
+      "2": {
+        "content": "$2",
+        "example": "100"
+      }
+    }
+  }
+}

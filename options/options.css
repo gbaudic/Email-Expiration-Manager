@@ -1,0 +1,386 @@
+/**
+ * Options page styles
+ */
+
+:root {
+  --primary-color: #0a84ff;
+  --danger-color: #d70022;
+  --success-color: #12bc00;
+  --border-color: #d7d7db;
+  --bg-color: #ffffff;
+  --bg-secondary: #f9f9fa;
+  --text-primary: #0c0c0d;
+  --text-secondary: #737373;
+  --shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--text-primary);
+  background-color: var(--bg-secondary);
+  padding: 20px;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: var(--bg-color);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+header {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 30px;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 28px;
+  font-weight: 300;
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+main {
+  padding: 30px;
+}
+
+.settings-section {
+  margin-bottom: 40px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.settings-section:last-of-type {
+  border-bottom: none;
+}
+
+.settings-section h2 {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 20px;
+  color: var(--text-primary);
+}
+
+.setting-item {
+  margin-bottom: 20px;
+}
+
+.setting-item label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.checkbox-label input[type="checkbox"] {
+  margin-right: 10px;
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+
+.setting-description {
+  color: var(--text-secondary);
+  font-size: 13px;
+  margin-top: 5px;
+  margin-left: 28px;
+}
+
+.warning-text {
+  color: var(--danger-color);
+  font-weight: 500;
+}
+
+.select-input,
+.number-input {
+  width: 100%;
+  max-width: 400px;
+  padding: 8px 12px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  font-size: 14px;
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+}
+
+.select-input:focus,
+.number-input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(10, 132, 255, 0.1);
+}
+
+.number-input {
+  max-width: 150px;
+}
+
+.button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+
+.button-primary {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.button-primary:hover {
+  background-color: #0060df;
+}
+
+.button-secondary {
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+}
+
+.button-secondary:hover {
+  background-color: #ededf0;
+}
+
+.button-danger {
+  background-color: var(--danger-color);
+  color: white;
+}
+
+.button-danger:hover {
+  background-color: #a4000f;
+}
+
+.folder-list {
+  max-height: 400px;
+  overflow-y: auto;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  padding: 10px;
+  background-color: var(--bg-color);
+  margin-bottom: 10px;
+}
+
+.folder-controls {
+  margin-bottom: 10px;
+}
+
+.folder-account-header {
+  font-weight: 600;
+  font-size: 14px;
+  padding: 10px 8px 5px 8px;
+  margin-top: 10px;
+  color: var(--primary-color);
+  border-bottom: 2px solid var(--primary-color);
+  background-color: var(--bg-secondary);
+}
+
+.folder-account-header:first-child {
+  margin-top: 0;
+}
+
+.folder-item {
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  border-bottom: 1px solid var(--bg-secondary);
+}
+
+.folder-item:last-child {
+  border-bottom: none;
+}
+
+.folder-item input[type="checkbox"] {
+  margin-right: 10px;
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+
+.folder-item label {
+  cursor: pointer;
+  flex: 1;
+  margin: 0;
+  font-weight: normal;
+}
+
+.account-list {
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  padding: 10px;
+  background-color: var(--bg-color);
+  margin-bottom: 10px;
+}
+
+.account-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid var(--bg-secondary);
+}
+
+.account-item:last-child {
+  border-bottom: none;
+}
+
+.account-item input[type="checkbox"] {
+  margin-right: 10px;
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+
+.account-item label {
+  cursor: pointer;
+  flex: 1;
+  margin: 0;
+  font-weight: 500;
+}
+
+.account-type {
+  font-size: 12px;
+  color: var(--text-secondary);
+  background-color: var(--bg-secondary);
+  padding: 2px 8px;
+  border-radius: 3px;
+}
+
+.logs-controls {
+  margin-bottom: 15px;
+}
+
+.logs-container {
+  max-height: 500px;
+  overflow-y: auto;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  padding: 15px;
+  background-color: var(--bg-secondary);
+}
+
+.log-entry {
+  background-color: var(--bg-color);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  padding: 15px;
+  margin-bottom: 15px;
+}
+
+.log-entry:last-child {
+  margin-bottom: 0;
+}
+
+.log-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.error-badge {
+  font-size: 16px;
+}
+
+.log-details p {
+  margin-bottom: 5px;
+  font-size: 13px;
+}
+
+.log-errors {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #fff4f4;
+  border-left: 3px solid var(--danger-color);
+  border-radius: 4px;
+}
+
+.log-errors ul {
+  margin-left: 20px;
+  margin-top: 5px;
+}
+
+.log-errors li {
+  font-size: 12px;
+  color: var(--danger-color);
+}
+
+.save-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+  padding-top: 30px;
+  border-top: 2px solid var(--border-color);
+}
+
+.save-status {
+  margin-left: 15px;
+  color: var(--success-color);
+  font-weight: 500;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.save-status.visible {
+  opacity: 1;
+}
+
+#targetFolderContainer {
+  display: none;
+}
+
+#permanentDeleteContainer {
+  display: none;
+}
+
+#intervalContainer {
+  display: none;
+}
+
+/* Scrollbar styles */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #b1b1b3;
+}

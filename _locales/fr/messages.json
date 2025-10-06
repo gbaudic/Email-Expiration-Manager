@@ -1,0 +1,316 @@
+{
+  "extensionName": {
+    "message": "Gestionnaire d'Expiration des E-mails",
+    "description": "Nom de l'extension"
+  },
+  "extensionDescription": {
+    "message": "Gérez automatiquement les e-mails avec dates d'expiration en les déplaçant ou supprimant à expiration",
+    "description": "Description de l'extension"
+  },
+  "optionsTitle": {
+    "message": "Gestionnaire d'Expiration des E-mails - Paramètres",
+    "description": "Titre de la page d'options"
+  },
+  "optionsSubtitle": {
+    "message": "Configurez la gestion des e-mails expirés",
+    "description": "Sous-titre de la page d'options"
+  },
+  "generalSettings": {
+    "message": "Paramètres Généraux",
+    "description": "Titre de section pour les paramètres généraux"
+  },
+  "enableExtension": {
+    "message": "Activer l'extension",
+    "description": "Label pour la case à cocher d'activation"
+  },
+  "enableExtensionDesc": {
+    "message": "Lorsque désactivée, aucune vérification automatique ne s'exécutera",
+    "description": "Description de l'option d'activation"
+  },
+  "dryRunMode": {
+    "message": "Mode simulation",
+    "description": "Label pour la case à cocher du mode simulation"
+  },
+  "dryRunModeDesc": {
+    "message": "Détecte uniquement les e-mails expirés sans les déplacer ou supprimer",
+    "description": "Description du mode simulation"
+  },
+  "showNotifications": {
+    "message": "Afficher les notifications",
+    "description": "Label pour la case à cocher des notifications"
+  },
+  "showNotificationsDesc": {
+    "message": "Affiche une notification lorsque les vérifications sont terminées",
+    "description": "Description de l'option de notifications"
+  },
+  "logActions": {
+    "message": "Activer la journalisation",
+    "description": "Label pour la case à cocher de journalisation"
+  },
+  "logActionsDesc": {
+    "message": "Conserve un historique de toutes les actions effectuées",
+    "description": "Description de l'option de journalisation"
+  },
+  "actionSettings": {
+    "message": "Paramètres d'Action",
+    "description": "Titre de section pour les paramètres d'action"
+  },
+  "actionLabel": {
+    "message": "Action pour les e-mails expirés :",
+    "description": "Label pour la sélection d'action"
+  },
+  "actionDelete": {
+    "message": "Supprimer",
+    "description": "Option pour supprimer les e-mails expirés"
+  },
+  "actionMove": {
+    "message": "Déplacer vers un dossier",
+    "description": "Option pour déplacer les e-mails expirés"
+  },
+  "permanentDelete": {
+    "message": "Suppression définitive (sans corbeille)",
+    "description": "Option pour supprimer définitivement les e-mails"
+  },
+  "permanentDeleteDesc": {
+    "message": "⚠️ Attention : Les e-mails seront définitivement supprimés et ne pourront pas être récupérés",
+    "description": "Avertissement pour l'option de suppression définitive"
+  },
+  "targetFolderLabel": {
+    "message": "Dossier de destination :",
+    "description": "Label pour la sélection du dossier cible"
+  },
+  "selectFolder": {
+    "message": "-- Sélectionnez un dossier --",
+    "description": "Placeholder pour la sélection de dossier"
+  },
+  "refreshFolders": {
+    "message": "Actualiser les dossiers",
+    "description": "Bouton pour actualiser la liste des dossiers"
+  },
+  "checkSettings": {
+    "message": "Paramètres de Vérification",
+    "description": "Titre de section pour les paramètres de vérification"
+  },
+  "checkOnStartup": {
+    "message": "Vérifier au démarrage de Thunderbird",
+    "description": "Label pour l'option de vérification au démarrage"
+  },
+  "periodicCheck": {
+    "message": "Activer les vérifications périodiques",
+    "description": "Label pour l'option de vérification périodique"
+  },
+  "checkIntervalLabel": {
+    "message": "Vérifier toutes les (minutes) :",
+    "description": "Label pour l'intervalle de vérification"
+  },
+  "accountSelection": {
+    "message": "Sélection des Comptes",
+    "description": "Titre de section pour la sélection de comptes"
+  },
+  "accountSelectionDesc": {
+    "message": "Laissez vide pour vérifier tous les comptes, ou sélectionnez des comptes spécifiques",
+    "description": "Description de la sélection de comptes"
+  },
+  "loadingAccounts": {
+    "message": "Chargement des comptes...",
+    "description": "Message de chargement des comptes"
+  },
+  "noAccountsFound": {
+    "message": "Aucun compte trouvé",
+    "description": "Message quand aucun compte n'est trouvé"
+  },
+  "refreshAccountList": {
+    "message": "Actualiser la liste des comptes",
+    "description": "Bouton pour actualiser la liste des comptes"
+  },
+  "folderSelection": {
+    "message": "Sélection des Dossiers",
+    "description": "Titre de section pour la sélection de dossiers"
+  },
+  "folderSelectionDesc": {
+    "message": "Laissez vide pour vérifier tous les dossiers, ou sélectionnez des dossiers spécifiques",
+    "description": "Description de la sélection de dossiers"
+  },
+  "selectAllFolders": {
+    "message": "Tout sélectionner",
+    "description": "Bouton pour sélectionner tous les dossiers"
+  },
+  "deselectAllFolders": {
+    "message": "Tout désélectionner",
+    "description": "Bouton pour désélectionner tous les dossiers"
+  },
+  "loadingFolders": {
+    "message": "Chargement des dossiers...",
+    "description": "Message de chargement des dossiers"
+  },
+  "noFoldersFound": {
+    "message": "Aucun dossier trouvé",
+    "description": "Message quand aucun dossier n'est trouvé"
+  },
+  "refreshFolderList": {
+    "message": "Actualiser la liste des dossiers",
+    "description": "Bouton pour actualiser la liste des dossiers"
+  },
+  "activityLogs": {
+    "message": "Journal d'Activité",
+    "description": "Titre de section pour le journal d'activité"
+  },
+  "clearLogs": {
+    "message": "Effacer les journaux",
+    "description": "Bouton pour effacer les journaux"
+  },
+  "exportLogs": {
+    "message": "Exporter les journaux",
+    "description": "Bouton pour exporter les journaux"
+  },
+  "noLogs": {
+    "message": "Aucun journal disponible",
+    "description": "Message quand aucun journal n'existe"
+  },
+  "logAction": {
+    "message": "Action",
+    "description": "Champ de journal : type d'action"
+  },
+  "logChecked": {
+    "message": "E-mails vérifiés",
+    "description": "Champ de journal : e-mails vérifiés"
+  },
+  "logExpired": {
+    "message": "Expirés trouvés",
+    "description": "Champ de journal : e-mails expirés trouvés"
+  },
+  "logProcessed": {
+    "message": "Traités",
+    "description": "Champ de journal : e-mails traités"
+  },
+  "logErrors": {
+    "message": "Erreurs",
+    "description": "Champ de journal : erreurs"
+  },
+  "saveSettings": {
+    "message": "Enregistrer les Paramètres",
+    "description": "Bouton pour enregistrer les paramètres"
+  },
+  "settingsSaved": {
+    "message": "✓ Paramètres enregistrés avec succès",
+    "description": "Message de confirmation d'enregistrement"
+  },
+  "confirmClearLogs": {
+    "message": "Êtes-vous sûr de vouloir effacer tous les journaux ? Cette action est irréversible.",
+    "description": "Message de confirmation pour effacer les journaux"
+  },
+  "statusLabel": {
+    "message": "Statut",
+    "description": "Label pour le statut dans la popup"
+  },
+  "lastCheckLabel": {
+    "message": "Dernière vérification",
+    "description": "Label pour la dernière vérification dans la popup"
+  },
+  "runCheckNow": {
+    "message": "Lancer la Vérification",
+    "description": "Bouton pour lancer une vérification manuelle"
+  },
+  "checkingEmails": {
+    "message": "Vérification des e-mails...",
+    "description": "Message de progression pendant la vérification"
+  },
+  "resultChecked": {
+    "message": "Vérifiés",
+    "description": "Label de résultat : e-mails vérifiés"
+  },
+  "resultExpired": {
+    "message": "Expirés",
+    "description": "Label de résultat : expirés trouvés"
+  },
+  "resultProcessed": {
+    "message": "Traités",
+    "description": "Label de résultat : e-mails traités"
+  },
+  "openSettings": {
+    "message": "Ouvrir les Paramètres",
+    "description": "Lien pour ouvrir la page de paramètres"
+  },
+  "statusEnabled": {
+    "message": "Activée",
+    "description": "Statut : extension activée"
+  },
+  "statusDisabled": {
+    "message": "Désactivée",
+    "description": "Statut : extension désactivée"
+  },
+  "never": {
+    "message": "Jamais",
+    "description": "Temps : jamais"
+  },
+  "justNow": {
+    "message": "À l'instant",
+    "description": "Temps : à l'instant"
+  },
+  "minutesAgo": {
+    "message": "Il y a $1 minutes",
+    "description": "Temps : il y a X minutes",
+    "placeholders": {
+      "1": {
+        "content": "$1",
+        "example": "5"
+      }
+    }
+  },
+  "hoursAgo": {
+    "message": "Il y a $1 heures",
+    "description": "Temps : il y a X heures",
+    "placeholders": {
+      "1": {
+        "content": "$1",
+        "example": "2"
+      }
+    }
+  },
+  "daysAgo": {
+    "message": "Il y a $1 jours",
+    "description": "Temps : il y a X jours",
+    "placeholders": {
+      "1": {
+        "content": "$1",
+        "example": "3"
+      }
+    }
+  },
+  "checkFailed": {
+    "message": "Vérification échouée",
+    "description": "Message d'erreur quand la vérification échoue"
+  },
+  "notificationComplete": {
+    "message": "Vérification terminée : $1 sur $2 e-mails expirés traités (sur $3 vérifiés au total)",
+    "description": "Notification quand la vérification est terminée",
+    "placeholders": {
+      "1": {
+        "content": "$1",
+        "example": "5"
+      },
+      "2": {
+        "content": "$2",
+        "example": "10"
+      },
+      "3": {
+        "content": "$3",
+        "example": "100"
+      }
+    }
+  },
+  "notificationDryRun": {
+    "message": "Simulation terminée : $1 e-mails expirés trouvés (sur $2 vérifiés au total)",
+    "description": "Notification pour la simulation",
+    "placeholders": {
+      "1": {
+        "content": "$1",
+        "example": "10"
+      },
+      "2": {
+        "content": "$2",
+        "example": "100"
+      }
+    }
+  }
+}
