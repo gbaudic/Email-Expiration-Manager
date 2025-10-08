@@ -1,5 +1,8 @@
 # 📧 Email Expiration Manager for Thunderbird
 
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+[![Thunderbird](https://img.shields.io/badge/Thunderbird-102%2B-blue)](https://www.thunderbird.net/)
+
 A Thunderbird extension that automatically manages emails with expiration dates by moving or deleting them when they expire.
 
 ## 🌟 Features
@@ -47,6 +50,8 @@ Package the extension as an XPI file:
 # From the extension directory
 zip -r email-expiration-manager.xpi * -x "*.git*"
 ```
+
+Or download it directly [here](https://github.com/Mindbaz/Email-Expiration-Manager/blob/main/email-expiration-manager.xpi) 
 
 Then install the XPI file through the Add-ons Manager.
 
@@ -201,7 +206,16 @@ The extension logs its activities with `console.log()` statements.
 
 ## 📝 License
 
-This project is open-source. Feel free to use, modify, and distribute.
+This project is licensed under the **GNU General Public License v3.0** (GPL-3.0).
+
+For the complete license text, see the [LICENSE](LICENSE) file or visit:
+https://www.gnu.org/licenses/gpl-3.0.html
+
+---
+
+**Copyright (C) 2025 [Mindbaz](https://www.mindbaz.com/) & [Sweego](https://www.sweego.io/) / Pierre-Yves Dubreucq**
+
+This program comes with ABSOLUTELY NO WARRANTY. This is free software, and you are welcome to redistribute it under certain conditions; see the LICENSE file for details.
 
 ## 🤝 Contributing
 
@@ -222,22 +236,35 @@ Expires: Tue, 20 Aug 2024 14:18:31 -0000
 Format: RFC 5322 date-time
 Syntax: `Expires: date-time CRLF`
 
-## 🎨 Creating Icons
+## 🌍 Environmental Context & Standardization
 
-You need four icon sizes:
-- 16x16 pixels
-- 32x32 pixels
-- 48x48 pixels
-- 128x128 pixels
+The "Expires" header is part of an important initiative to **reduce the environmental impact of email**. Digital pollution from email storage is a growing concern, and the Expires header provides a standardized way for senders to indicate when their messages are no longer needed.
 
-Save them as PNG files in the `icons/` folder.
+### About the Initiative
 
-### Simple Icon Creation
+The [Zero Carbon Email](https://www.zerocarbon.email/) project brings together email service providers, software vendors, and environmental advocates to promote sustainable email practices. By allowing senders to specify an expiration date, unnecessary emails can be automatically removed, reducing:
 
-You can create icons using:
-- Online tools like Canva or Figma
-- Image editing software like GIMP or Photoshop
-- Or use placeholder icons for testing
+- Energy consumption from data center storage
+- Carbon emissions from server operations
+- Storage infrastructure requirements
+
+### RFC Standardization
+
+The Expires header is currently being standardized through the Internet Engineering Task Force (IETF). The draft RFC is under review and can be found here:
+
+**[draft-ietf-mailmaint-expires](https://datatracker.ietf.org/doc/draft-ietf-mailmaint-expires/)**
+
+This extension helps implement this emerging standard, allowing Thunderbird users to automatically manage expired emails according to sender preferences. By using this extension, you're participating in a broader effort to make email more environmentally sustainable.
+
+### Key Benefits
+
+- ✅ **Automatic cleanup** of promotional emails, newsletters, and time-sensitive content
+- ✅ **Reduced storage** requirements on both client and server
+- ✅ **Environmental impact** reduction through decreased energy consumption
+
+### Icon Credits
+
+Icons used in this extension are provided by [Ibrandify](http://www.ibrandify.com/?ref=svgrepo.com) under the CC Attribution License via [SVG Repo](https://www.svgrepo.com/).
 
 ## 🔐 Privacy
 
