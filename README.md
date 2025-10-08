@@ -1,4 +1,4 @@
-# 📧 Email Expiration Manager for Thunderbird
+# <img src="icons/icon-32.png" width="32" height="32" alt="Email Expiration Manager"> Email Expiration Manager for Thunderbird
 
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 [![Thunderbird](https://img.shields.io/badge/Thunderbird-102%2B-blue)](https://www.thunderbird.net/)
