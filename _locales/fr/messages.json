@@ -312,5 +312,53 @@
         "example": "100"
       }
     }
+  },
+  "aboutTitle": {
+    "message": "À propos d'Email Expiration Manager",
+    "description": "Titre de la section à propos"
+  },
+  "aboutInitiativeTitle": {
+    "message": "🌱 L'Initiative de l'En-tête Expires",
+    "description": "Titre de la sous-section initiative"
+  },
+  "aboutInitiativeText": {
+    "message": "L'en-tête \"Expires\" des e-mails fait partie d'une initiative environnementale plus large visant à réduire l'empreinte carbone du stockage des e-mails. Les centres de données stockant des milliards d'e-mails dans le monde consomment d'énormes quantités d'énergie. De nombreux e-mails ont une date d'expiration naturelle mais restent stockés indéfiniment, consommant inutilement des ressources.",
+    "description": "Description de l'initiative"
+  },
+  "aboutZeroCarbonTitle": {
+    "message": "Zero Carbon Email",
+    "description": "Titre de la section Zero Carbon"
+  },
+  "aboutZeroCarbonText": {
+    "message": "L'initiative Zero Carbon Email rassemble des fournisseurs de messagerie, des éditeurs de logiciels et des défenseurs de l'environnement pour résoudre ce problème. En introduisant un en-tête \"Expires\" standardisé, les expéditeurs d'e-mails peuvent indiquer quand leurs messages ne sont plus nécessaires.",
+    "description": "Description Zero Carbon"
+  },
+  "aboutStandardizationTitle": {
+    "message": "Standardisation (RFC IETF)",
+    "description": "Titre de la section standardisation"
+  },
+  "aboutStandardizationText": {
+    "message": "L'en-tête \"Expires\" est actuellement en cours de standardisation par l'Internet Engineering Task Force (IETF). Le projet de spécification : draft-ietf-mailmaint-expires",
+    "description": "Description de la standardisation"
+  },
+  "aboutExtensionTitle": {
+    "message": "Rôle de Cette Extension",
+    "description": "Titre de la section rôle de l'extension"
+  },
+  "aboutExtensionText": {
+    "message": "Email Expiration Manager implémente ce standard émergent dans Thunderbird, vous permettant de traiter automatiquement les e-mails selon les dates d'expiration définies par l'expéditeur. En utilisant cette extension, vous participez à rendre les e-mails plus durables sur le plan environnemental.",
+    "description": "Description du rôle de l'extension"
+  },
+  "aboutLicense": {
+    "message": "Licence :",
+    "description": "Label de licence"
+  },
+  "aboutSource": {
+    "message": "Code Source :",
+    "description": "Label de code source"
+  },
+  "aboutDevelopedBy": {
+    "message": "Développé par :",
+    "description": "Label développé par"
   }
 }

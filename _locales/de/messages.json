@@ -1,0 +1,364 @@
+{
+  "extensionName": {
+    "message": "E-Mail-Ablauf-Manager",
+    "description": "Name der Erweiterung"
+  },
+  "extensionDescription": {
+    "message": "Verwaltet automatisch E-Mails mit Ablaufdaten durch Verschieben oder Löschen nach Ablauf",
+    "description": "Beschreibung der Erweiterung"
+  },
+  "optionsTitle": {
+    "message": "E-Mail-Ablauf-Manager - Einstellungen",
+    "description": "Titel der Optionsseite"
+  },
+  "optionsSubtitle": {
+    "message": "Konfigurieren Sie, wie abgelaufene E-Mails verwaltet werden",
+    "description": "Untertitel der Optionsseite"
+  },
+  "generalSettings": {
+    "message": "Allgemeine Einstellungen",
+    "description": "Abschnittstitel für allgemeine Einstellungen"
+  },
+  "enableExtension": {
+    "message": "Erweiterung aktivieren",
+    "description": "Beschriftung zum Aktivieren der Erweiterung"
+  },
+  "enableExtensionDesc": {
+    "message": "Wenn deaktiviert, werden keine automatischen Prüfungen durchgeführt",
+    "description": "Beschreibung der Aktivierungsoption"
+  },
+  "dryRunMode": {
+    "message": "Simulationsmodus",
+    "description": "Beschriftung für Simulationsmodus"
+  },
+  "dryRunModeDesc": {
+    "message": "Erkennt nur abgelaufene E-Mails ohne sie zu verschieben oder zu löschen",
+    "description": "Beschreibung des Simulationsmodus"
+  },
+  "showNotifications": {
+    "message": "Benachrichtigungen anzeigen",
+    "description": "Beschriftung für Benachrichtigungen"
+  },
+  "showNotificationsDesc": {
+    "message": "Zeigt eine Benachrichtigung an, wenn Prüfungen abgeschlossen sind",
+    "description": "Beschreibung der Benachrichtigungsoption"
+  },
+  "logActions": {
+    "message": "Protokollierung aktivieren",
+    "description": "Beschriftung für Protokollierung"
+  },
+  "logActionsDesc": {
+    "message": "Führt eine Historie aller durchgeführten Aktionen",
+    "description": "Beschreibung der Protokollierungsoption"
+  },
+  "actionSettings": {
+    "message": "Aktionseinstellungen",
+    "description": "Abschnittstitel für Aktionseinstellungen"
+  },
+  "actionLabel": {
+    "message": "Aktion für abgelaufene E-Mails:",
+    "description": "Beschriftung für Aktionsauswahl"
+  },
+  "actionDelete": {
+    "message": "Löschen",
+    "description": "Option zum Löschen abgelaufener E-Mails"
+  },
+  "actionMove": {
+    "message": "In Ordner verschieben",
+    "description": "Option zum Verschieben abgelaufener E-Mails"
+  },
+  "permanentDelete": {
+    "message": "Dauerhaftes Löschen (Papierkorb umgehen)",
+    "description": "Option zum dauerhaften Löschen von E-Mails"
+  },
+  "permanentDeleteDesc": {
+    "message": "⚠️ Warnung: E-Mails werden dauerhaft gelöscht und können nicht wiederhergestellt werden",
+    "description": "Warnung für dauerhafte Löschoption"
+  },
+  "targetFolderLabel": {
+    "message": "Zielordner:",
+    "description": "Beschriftung für Zielordnerauswahl"
+  },
+  "selectFolder": {
+    "message": "-- Ordner auswählen --",
+    "description": "Platzhalter für Ordnerauswahl"
+  },
+  "refreshFolders": {
+    "message": "Ordner aktualisieren",
+    "description": "Schaltfläche zum Aktualisieren der Ordnerliste"
+  },
+  "checkSettings": {
+    "message": "Prüfungseinstellungen",
+    "description": "Abschnittstitel für Prüfungseinstellungen"
+  },
+  "checkOnStartup": {
+    "message": "Beim Thunderbird-Start prüfen",
+    "description": "Beschriftung für Prüfung beim Start"
+  },
+  "periodicCheck": {
+    "message": "Periodische Prüfungen aktivieren",
+    "description": "Beschriftung für periodische Prüfung"
+  },
+  "checkIntervalLabel": {
+    "message": "Prüfen alle (Minuten):",
+    "description": "Beschriftung für Prüfintervall"
+  },
+  "accountSelection": {
+    "message": "Kontoauswahl",
+    "description": "Abschnittstitel für Kontoauswahl"
+  },
+  "accountSelectionDesc": {
+    "message": "Leer lassen, um alle Konten zu prüfen, oder bestimmte Konten auswählen",
+    "description": "Beschreibung der Kontoauswahl"
+  },
+  "loadingAccounts": {
+    "message": "Konten werden geladen...",
+    "description": "Lademeldung für Konten"
+  },
+  "noAccountsFound": {
+    "message": "Keine Konten gefunden",
+    "description": "Meldung, wenn keine Konten gefunden werden"
+  },
+  "refreshAccountList": {
+    "message": "Kontoliste aktualisieren",
+    "description": "Schaltfläche zum Aktualisieren der Kontoliste"
+  },
+  "folderSelection": {
+    "message": "Ordnerauswahl",
+    "description": "Abschnittstitel für Ordnerauswahl"
+  },
+  "folderSelectionDesc": {
+    "message": "Leer lassen, um alle Ordner zu prüfen, oder bestimmte Ordner auswählen",
+    "description": "Beschreibung der Ordnerauswahl"
+  },
+  "selectAllFolders": {
+    "message": "Alle Ordner auswählen",
+    "description": "Schaltfläche zum Auswählen aller Ordner"
+  },
+  "deselectAllFolders": {
+    "message": "Alle Ordner abwählen",
+    "description": "Schaltfläche zum Abwählen aller Ordner"
+  },
+  "loadingFolders": {
+    "message": "Ordner werden geladen...",
+    "description": "Lademeldung für Ordner"
+  },
+  "noFoldersFound": {
+    "message": "Keine Ordner gefunden",
+    "description": "Meldung, wenn keine Ordner gefunden werden"
+  },
+  "refreshFolderList": {
+    "message": "Ordnerliste aktualisieren",
+    "description": "Schaltfläche zum Aktualisieren der Ordnerliste"
+  },
+  "activityLogs": {
+    "message": "Aktivitätsprotokolle",
+    "description": "Abschnittstitel für Aktivitätsprotokolle"
+  },
+  "clearLogs": {
+    "message": "Protokolle löschen",
+    "description": "Schaltfläche zum Löschen der Protokolle"
+  },
+  "exportLogs": {
+    "message": "Protokolle exportieren",
+    "description": "Schaltfläche zum Exportieren der Protokolle"
+  },
+  "noLogs": {
+    "message": "Keine Protokolle verfügbar",
+    "description": "Meldung, wenn keine Protokolle vorhanden sind"
+  },
+  "logAction": {
+    "message": "Aktion",
+    "description": "Protokollfeld: Aktionstyp"
+  },
+  "logChecked": {
+    "message": "E-Mails geprüft",
+    "description": "Protokollfeld: geprüfte E-Mails"
+  },
+  "logExpired": {
+    "message": "Abgelaufene gefunden",
+    "description": "Protokollfeld: gefundene abgelaufene E-Mails"
+  },
+  "logProcessed": {
+    "message": "Verarbeitet",
+    "description": "Protokollfeld: verarbeitete E-Mails"
+  },
+  "logErrors": {
+    "message": "Fehler",
+    "description": "Protokollfeld: Fehler"
+  },
+  "saveSettings": {
+    "message": "Einstellungen speichern",
+    "description": "Schaltfläche zum Speichern der Einstellungen"
+  },
+  "settingsSaved": {
+    "message": "✓ Einstellungen erfolgreich gespeichert",
+    "description": "Bestätigungsmeldung für gespeicherte Einstellungen"
+  },
+  "confirmClearLogs": {
+    "message": "Sind Sie sicher, dass Sie alle Protokolle löschen möchten? Diese Aktion kann nicht rückgängig gemacht werden.",
+    "description": "Bestätigungsmeldung zum Löschen der Protokolle"
+  },
+  "statusLabel": {
+    "message": "Status",
+    "description": "Beschriftung für Status im Popup"
+  },
+  "lastCheckLabel": {
+    "message": "Letzte Prüfung",
+    "description": "Beschriftung für letzte Prüfung im Popup"
+  },
+  "runCheckNow": {
+    "message": "Jetzt prüfen",
+    "description": "Schaltfläche zum manuellen Ausführen der Prüfung"
+  },
+  "checkingEmails": {
+    "message": "E-Mails werden geprüft...",
+    "description": "Fortschrittsmeldung während der Prüfung"
+  },
+  "resultChecked": {
+    "message": "Geprüft",
+    "description": "Ergebnisbeschriftung: geprüfte E-Mails"
+  },
+  "resultExpired": {
+    "message": "Abgelaufen",
+    "description": "Ergebnisbeschriftung: gefundene abgelaufene"
+  },
+  "resultProcessed": {
+    "message": "Verarbeitet",
+    "description": "Ergebnisbeschriftung: verarbeitete E-Mails"
+  },
+  "openSettings": {
+    "message": "Einstellungen öffnen",
+    "description": "Link zum Öffnen der Einstellungsseite"
+  },
+  "statusEnabled": {
+    "message": "Aktiviert",
+    "description": "Status: Erweiterung aktiviert"
+  },
+  "statusDisabled": {
+    "message": "Deaktiviert",
+    "description": "Status: Erweiterung deaktiviert"
+  },
+  "never": {
+    "message": "Nie",
+    "description": "Zeit: nie"
+  },
+  "justNow": {
+    "message": "Gerade eben",
+    "description": "Zeit: gerade eben"
+  },
+  "minutesAgo": {
+    "message": "Vor $1 Minuten",
+    "description": "Zeit: vor X Minuten",
+    "placeholders": {
+      "1": {
+        "content": "$1",
+        "example": "5"
+      }
+    }
+  },
+  "hoursAgo": {
+    "message": "Vor $1 Stunden",
+    "description": "Zeit: vor X Stunden",
+    "placeholders": {
+      "1": {
+        "content": "$1",
+        "example": "2"
+      }
+    }
+  },
+  "daysAgo": {
+    "message": "Vor $1 Tagen",
+    "description": "Zeit: vor X Tagen",
+    "placeholders": {
+      "1": {
+        "content": "$1",
+        "example": "3"
+      }
+    }
+  },
+  "checkFailed": {
+    "message": "Prüfung fehlgeschlagen",
+    "description": "Fehlermeldung bei fehlgeschlagener Prüfung"
+  },
+  "notificationComplete": {
+    "message": "Prüfung abgeschlossen: $1 von $2 abgelaufenen E-Mails verarbeitet (von $3 insgesamt geprüft)",
+    "description": "Benachrichtigung bei abgeschlossener Prüfung",
+    "placeholders": {
+      "1": {
+        "content": "$1",
+        "example": "5"
+      },
+      "2": {
+        "content": "$2",
+        "example": "10"
+      },
+      "3": {
+        "content": "$3",
+        "example": "100"
+      }
+    }
+  },
+  "notificationDryRun": {
+    "message": "Simulation abgeschlossen: $1 abgelaufene E-Mails gefunden (von $2 insgesamt geprüft)",
+    "description": "Benachrichtigung für Simulation",
+    "placeholders": {
+      "1": {
+        "content": "$1",
+        "example": "10"
+      },
+      "2": {
+        "content": "$2",
+        "example": "100"
+      }
+    }
+  },
+  "aboutTitle": {
+    "message": "Über E-Mail-Ablauf-Manager",
+    "description": "Titel des Über-Abschnitts"
+  },
+  "aboutInitiativeTitle": {
+    "message": "🌱 Die Expires-Header-Initiative",
+    "description": "Titel des Initiativ-Unterabschnitts"
+  },
+  "aboutInitiativeText": {
+    "message": "Der \"Expires\"-E-Mail-Header ist Teil einer umfassenderen Umweltinitiative zur Reduzierung des CO2-Fußabdrucks der E-Mail-Speicherung. Rechenzentren, die weltweit Milliarden von E-Mails speichern, verbrauchen enorme Mengen an Energie. Viele E-Mails haben ein natürliches Ablaufdatum, werden aber auf unbestimmte Zeit gespeichert und verbrauchen unnötig Ressourcen.",
+    "description": "Beschreibung der Initiative"
+  },
+  "aboutZeroCarbonTitle": {
+    "message": "Zero Carbon Email",
+    "description": "Titel des Zero Carbon-Abschnitts"
+  },
+  "aboutZeroCarbonText": {
+    "message": "Die Zero Carbon Email-Initiative bringt E-Mail-Dienstanbieter, Softwareanbieter und Umweltschützer zusammen, um dieses Problem anzugehen. Durch die Einführung eines standardisierten \"Expires\"-Headers können E-Mail-Absender angeben, wann ihre Nachrichten nicht mehr benötigt werden.",
+    "description": "Beschreibung von Zero Carbon"
+  },
+  "aboutStandardizationTitle": {
+    "message": "Standardisierung (IETF RFC)",
+    "description": "Titel des Standardisierungsabschnitts"
+  },
+  "aboutStandardizationText": {
+    "message": "Der \"Expires\"-Header wird derzeit durch die Internet Engineering Task Force (IETF) standardisiert. Der Entwurfsspezifikation: draft-ietf-mailmaint-expires",
+    "description": "Beschreibung der Standardisierung"
+  },
+  "aboutExtensionTitle": {
+    "message": "Rolle dieser Erweiterung",
+    "description": "Titel des Erweiterungsrollen-Abschnitts"
+  },
+  "aboutExtensionText": {
+    "message": "E-Mail-Ablauf-Manager implementiert diesen aufkommenden Standard in Thunderbird und ermöglicht Ihnen, E-Mails automatisch gemäß der vom Absender definierten Ablaufdaten zu verarbeiten. Durch die Verwendung dieser Erweiterung tragen Sie dazu bei, E-Mail umweltfreundlicher zu gestalten.",
+    "description": "Beschreibung der Erweiterungsrolle"
+  },
+  "aboutLicense": {
+    "message": "Lizenz:",
+    "description": "Lizenzbeschriftung"
+  },
+  "aboutSource": {
+    "message": "Quellcode:",
+    "description": "Quellcode-Beschriftung"
+  },
+  "aboutDevelopedBy": {
+    "message": "Entwickelt von:",
+    "description": "Entwickelt von Beschriftung"
+  }
+}

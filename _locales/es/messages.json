@@ -1,0 +1,364 @@
+{
+  "extensionName": {
+    "message": "Gestor de Expiración de Correos",
+    "description": "Nombre de la extensión"
+  },
+  "extensionDescription": {
+    "message": "Gestiona automáticamente los correos con fechas de expiración moviéndolos o eliminándolos cuando expiran",
+    "description": "Descripción de la extensión"
+  },
+  "optionsTitle": {
+    "message": "Gestor de Expiración de Correos - Configuración",
+    "description": "Título de la página de opciones"
+  },
+  "optionsSubtitle": {
+    "message": "Configure cómo se gestionan los correos expirados",
+    "description": "Subtítulo de la página de opciones"
+  },
+  "generalSettings": {
+    "message": "Configuración General",
+    "description": "Título de sección para configuración general"
+  },
+  "enableExtension": {
+    "message": "Activar extensión",
+    "description": "Etiqueta para activar extensión"
+  },
+  "enableExtensionDesc": {
+    "message": "Cuando está desactivada, no se ejecutarán comprobaciones automáticas",
+    "description": "Descripción de la opción de activación"
+  },
+  "dryRunMode": {
+    "message": "Modo simulación",
+    "description": "Etiqueta para el modo simulación"
+  },
+  "dryRunModeDesc": {
+    "message": "Solo detecta correos expirados sin moverlos ni eliminarlos",
+    "description": "Descripción del modo simulación"
+  },
+  "showNotifications": {
+    "message": "Mostrar notificaciones",
+    "description": "Etiqueta para mostrar notificaciones"
+  },
+  "showNotificationsDesc": {
+    "message": "Muestra una notificación cuando las comprobaciones están completas",
+    "description": "Descripción de la opción de notificaciones"
+  },
+  "logActions": {
+    "message": "Activar registro",
+    "description": "Etiqueta para el registro"
+  },
+  "logActionsDesc": {
+    "message": "Mantiene un historial de todas las acciones realizadas",
+    "description": "Descripción de la opción de registro"
+  },
+  "actionSettings": {
+    "message": "Configuración de Acción",
+    "description": "Título de sección para configuración de acción"
+  },
+  "actionLabel": {
+    "message": "Acción para correos expirados:",
+    "description": "Etiqueta para selección de acción"
+  },
+  "actionDelete": {
+    "message": "Eliminar",
+    "description": "Opción para eliminar correos expirados"
+  },
+  "actionMove": {
+    "message": "Mover a carpeta",
+    "description": "Opción para mover correos expirados"
+  },
+  "permanentDelete": {
+    "message": "Eliminación permanente (omitir papelera)",
+    "description": "Opción para eliminar permanentemente correos"
+  },
+  "permanentDeleteDesc": {
+    "message": "⚠️ Advertencia: Los correos se eliminarán permanentemente y no se podrán recuperar",
+    "description": "Advertencia para la opción de eliminación permanente"
+  },
+  "targetFolderLabel": {
+    "message": "Carpeta de destino:",
+    "description": "Etiqueta para selección de carpeta destino"
+  },
+  "selectFolder": {
+    "message": "-- Seleccione una carpeta --",
+    "description": "Marcador para selección de carpeta"
+  },
+  "refreshFolders": {
+    "message": "Actualizar carpetas",
+    "description": "Botón para actualizar lista de carpetas"
+  },
+  "checkSettings": {
+    "message": "Configuración de Comprobación",
+    "description": "Título de sección para configuración de comprobación"
+  },
+  "checkOnStartup": {
+    "message": "Comprobar al iniciar Thunderbird",
+    "description": "Etiqueta para opción de comprobación al inicio"
+  },
+  "periodicCheck": {
+    "message": "Activar comprobaciones periódicas",
+    "description": "Etiqueta para opción de comprobación periódica"
+  },
+  "checkIntervalLabel": {
+    "message": "Comprobar cada (minutos):",
+    "description": "Etiqueta para intervalo de comprobación"
+  },
+  "accountSelection": {
+    "message": "Selección de Cuentas",
+    "description": "Título de sección para selección de cuentas"
+  },
+  "accountSelectionDesc": {
+    "message": "Deje vacío para comprobar todas las cuentas, o seleccione cuentas específicas",
+    "description": "Descripción de selección de cuentas"
+  },
+  "loadingAccounts": {
+    "message": "Cargando cuentas...",
+    "description": "Mensaje de carga de cuentas"
+  },
+  "noAccountsFound": {
+    "message": "No se encontraron cuentas",
+    "description": "Mensaje cuando no se encuentran cuentas"
+  },
+  "refreshAccountList": {
+    "message": "Actualizar lista de cuentas",
+    "description": "Botón para actualizar lista de cuentas"
+  },
+  "folderSelection": {
+    "message": "Selección de Carpetas",
+    "description": "Título de sección para selección de carpetas"
+  },
+  "folderSelectionDesc": {
+    "message": "Deje vacío para comprobar todas las carpetas, o seleccione carpetas específicas",
+    "description": "Descripción de selección de carpetas"
+  },
+  "selectAllFolders": {
+    "message": "Seleccionar todas las carpetas",
+    "description": "Botón para seleccionar todas las carpetas"
+  },
+  "deselectAllFolders": {
+    "message": "Deseleccionar todas las carpetas",
+    "description": "Botón para deseleccionar todas las carpetas"
+  },
+  "loadingFolders": {
+    "message": "Cargando carpetas...",
+    "description": "Mensaje de carga de carpetas"
+  },
+  "noFoldersFound": {
+    "message": "No se encontraron carpetas",
+    "description": "Mensaje cuando no se encuentran carpetas"
+  },
+  "refreshFolderList": {
+    "message": "Actualizar lista de carpetas",
+    "description": "Botón para actualizar lista de carpetas"
+  },
+  "activityLogs": {
+    "message": "Registros de Actividad",
+    "description": "Título de sección para registros de actividad"
+  },
+  "clearLogs": {
+    "message": "Borrar registros",
+    "description": "Botón para borrar registros"
+  },
+  "exportLogs": {
+    "message": "Exportar registros",
+    "description": "Botón para exportar registros"
+  },
+  "noLogs": {
+    "message": "No hay registros disponibles",
+    "description": "Mensaje cuando no hay registros"
+  },
+  "logAction": {
+    "message": "Acción",
+    "description": "Campo de registro: tipo de acción"
+  },
+  "logChecked": {
+    "message": "Correos verificados",
+    "description": "Campo de registro: correos verificados"
+  },
+  "logExpired": {
+    "message": "Expirados encontrados",
+    "description": "Campo de registro: correos expirados encontrados"
+  },
+  "logProcessed": {
+    "message": "Procesados",
+    "description": "Campo de registro: correos procesados"
+  },
+  "logErrors": {
+    "message": "Errores",
+    "description": "Campo de registro: errores"
+  },
+  "saveSettings": {
+    "message": "Guardar Configuración",
+    "description": "Botón para guardar configuración"
+  },
+  "settingsSaved": {
+    "message": "✓ Configuración guardada correctamente",
+    "description": "Mensaje de confirmación de guardado"
+  },
+  "confirmClearLogs": {
+    "message": "¿Está seguro de que desea borrar todos los registros? Esta acción no se puede deshacer.",
+    "description": "Mensaje de confirmación para borrar registros"
+  },
+  "statusLabel": {
+    "message": "Estado",
+    "description": "Etiqueta para estado en popup"
+  },
+  "lastCheckLabel": {
+    "message": "Última comprobación",
+    "description": "Etiqueta para última comprobación en popup"
+  },
+  "runCheckNow": {
+    "message": "Ejecutar Comprobación Ahora",
+    "description": "Botón para ejecutar comprobación manual"
+  },
+  "checkingEmails": {
+    "message": "Comprobando correos...",
+    "description": "Mensaje de progreso durante comprobación"
+  },
+  "resultChecked": {
+    "message": "Verificados",
+    "description": "Etiqueta de resultado: correos verificados"
+  },
+  "resultExpired": {
+    "message": "Expirados",
+    "description": "Etiqueta de resultado: expirados encontrados"
+  },
+  "resultProcessed": {
+    "message": "Procesados",
+    "description": "Etiqueta de resultado: correos procesados"
+  },
+  "openSettings": {
+    "message": "Abrir Configuración",
+    "description": "Enlace para abrir página de configuración"
+  },
+  "statusEnabled": {
+    "message": "Activada",
+    "description": "Estado: extensión activada"
+  },
+  "statusDisabled": {
+    "message": "Desactivada",
+    "description": "Estado: extensión desactivada"
+  },
+  "never": {
+    "message": "Nunca",
+    "description": "Tiempo: nunca"
+  },
+  "justNow": {
+    "message": "Ahora mismo",
+    "description": "Tiempo: ahora mismo"
+  },
+  "minutesAgo": {
+    "message": "Hace $1 minutos",
+    "description": "Tiempo: hace X minutos",
+    "placeholders": {
+      "1": {
+        "content": "$1",
+        "example": "5"
+      }
+    }
+  },
+  "hoursAgo": {
+    "message": "Hace $1 horas",
+    "description": "Tiempo: hace X horas",
+    "placeholders": {
+      "1": {
+        "content": "$1",
+        "example": "2"
+      }
+    }
+  },
+  "daysAgo": {
+    "message": "Hace $1 días",
+    "description": "Tiempo: hace X días",
+    "placeholders": {
+      "1": {
+        "content": "$1",
+        "example": "3"
+      }
+    }
+  },
+  "checkFailed": {
+    "message": "Comprobación fallida",
+    "description": "Mensaje de error cuando falla la comprobación"
+  },
+  "notificationComplete": {
+    "message": "Comprobación completada: $1 de $2 correos expirados procesados (de $3 verificados en total)",
+    "description": "Notificación cuando la comprobación está completa",
+    "placeholders": {
+      "1": {
+        "content": "$1",
+        "example": "5"
+      },
+      "2": {
+        "content": "$2",
+        "example": "10"
+      },
+      "3": {
+        "content": "$3",
+        "example": "100"
+      }
+    }
+  },
+  "notificationDryRun": {
+    "message": "Simulación completada: $1 correos expirados encontrados (de $2 verificados en total)",
+    "description": "Notificación para simulación",
+    "placeholders": {
+      "1": {
+        "content": "$1",
+        "example": "10"
+      },
+      "2": {
+        "content": "$2",
+        "example": "100"
+      }
+    }
+  },
+  "aboutTitle": {
+    "message": "Acerca de Gestor de Expiración de Correos",
+    "description": "Título de la sección acerca de"
+  },
+  "aboutInitiativeTitle": {
+    "message": "🌱 La Iniciativa del Encabezado Expires",
+    "description": "Título de la subsección iniciativa"
+  },
+  "aboutInitiativeText": {
+    "message": "El encabezado \"Expires\" de correo electrónico es parte de una iniciativa ambiental más amplia para reducir la huella de carbono del almacenamiento de correos. Los centros de datos que almacenan miles de millones de correos en todo el mundo consumen enormes cantidades de energía. Muchos correos tienen una fecha de expiración natural pero permanecen almacenados indefinidamente, consumiendo recursos innecesariamente.",
+    "description": "Descripción de la iniciativa"
+  },
+  "aboutZeroCarbonTitle": {
+    "message": "Zero Carbon Email",
+    "description": "Título de la sección Zero Carbon"
+  },
+  "aboutZeroCarbonText": {
+    "message": "La iniciativa Zero Carbon Email reúne a proveedores de servicios de correo, desarrolladores de software y defensores del medio ambiente para abordar este problema. Al introducir un encabezado \"Expires\" estandarizado, los remitentes de correos pueden indicar cuándo sus mensajes ya no son necesarios.",
+    "description": "Descripción Zero Carbon"
+  },
+  "aboutStandardizationTitle": {
+    "message": "Estandarización (RFC IETF)",
+    "description": "Título de la sección estandarización"
+  },
+  "aboutStandardizationText": {
+    "message": "El encabezado \"Expires\" está siendo estandarizado actualmente por el Internet Engineering Task Force (IETF). El proyecto de especificación: draft-ietf-mailmaint-expires",
+    "description": "Descripción de estandarización"
+  },
+  "aboutExtensionTitle": {
+    "message": "Rol de Esta Extensión",
+    "description": "Título de la sección rol de la extensión"
+  },
+  "aboutExtensionText": {
+    "message": "Gestor de Expiración de Correos implementa este estándar emergente en Thunderbird, permitiéndole procesar automáticamente correos según las fechas de expiración definidas por el remitente. Al usar esta extensión, está participando en hacer el correo electrónico más sostenible ambientalmente.",
+    "description": "Descripción del rol de la extensión"
+  },
+  "aboutLicense": {
+    "message": "Licencia:",
+    "description": "Etiqueta de licencia"
+  },
+  "aboutSource": {
+    "message": "Código Fuente:",
+    "description": "Etiqueta de código fuente"
+  },
+  "aboutDevelopedBy": {
+    "message": "Desarrollado por:",
+    "description": "Etiqueta desarrollado por"
+  }
+}
