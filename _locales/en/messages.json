@@ -1,255 +1,255 @@
 {
   "extensionName": {
-    "message": "Gestionnaire d'Expiration des E-mails",
-    "description": "Nom de l'extension"
+    "message": "Email Expiration Manager",
+    "description": "Name of the extension"
   },
   "extensionDescription": {
-    "message": "Gérez automatiquement les e-mails avec dates d'expiration en les déplaçant ou supprimant à expiration",
-    "description": "Description de l'extension"
+    "message": "Automatically manage emails with expiration dates by moving or deleting them when they expire",
+    "description": "Description of the extension"
   },
   "optionsTitle": {
-    "message": "Gestionnaire d'Expiration des E-mails - Paramètres",
-    "description": "Titre de la page d'options"
+    "message": "Email Expiration Manager - Settings",
+    "description": "Title for the options page"
   },
   "optionsSubtitle": {
-    "message": "Configurez la gestion des e-mails expirés",
-    "description": "Sous-titre de la page d'options"
+    "message": "Configure how expired emails are handled",
+    "description": "Subtitle for the options page"
   },
   "generalSettings": {
-    "message": "Paramètres Généraux",
-    "description": "Titre de section pour les paramètres généraux"
+    "message": "General Settings",
+    "description": "Section title for general settings"
   },
   "enableExtension": {
-    "message": "Activer l'extension",
-    "description": "Label pour la case à cocher d'activation"
+    "message": "Enable extension",
+    "description": "Label for enable extension checkbox"
   },
   "enableExtensionDesc": {
-    "message": "Lorsque désactivée, aucune vérification automatique ne s'exécutera",
-    "description": "Description de l'option d'activation"
+    "message": "When disabled, no automatic checks will run",
+    "description": "Description for enable extension option"
   },
   "dryRunMode": {
-    "message": "Mode simulation",
-    "description": "Label pour la case à cocher du mode simulation"
+    "message": "Dry run mode (simulation)",
+    "description": "Label for dry run mode checkbox"
   },
   "dryRunModeDesc": {
-    "message": "Détecte uniquement les e-mails expirés sans les déplacer ou supprimer",
-    "description": "Description du mode simulation"
+    "message": "Only detect expired emails without moving or deleting them",
+    "description": "Description for dry run mode"
   },
   "showNotifications": {
-    "message": "Afficher les notifications",
-    "description": "Label pour la case à cocher des notifications"
+    "message": "Show notifications",
+    "description": "Label for show notifications checkbox"
   },
   "showNotificationsDesc": {
-    "message": "Affiche une notification lorsque les vérifications sont terminées",
-    "description": "Description de l'option de notifications"
+    "message": "Display a notification when checks are complete",
+    "description": "Description for show notifications option"
   },
   "logActions": {
-    "message": "Activer la journalisation",
-    "description": "Label pour la case à cocher de journalisation"
+    "message": "Enable logging",
+    "description": "Label for log actions checkbox"
   },
   "logActionsDesc": {
-    "message": "Conserve un historique de toutes les actions effectuées",
-    "description": "Description de l'option de journalisation"
+    "message": "Keep a history of all actions performed",
+    "description": "Description for log actions option"
   },
   "actionSettings": {
-    "message": "Paramètres d'Action",
-    "description": "Titre de section pour les paramètres d'action"
+    "message": "Action Settings",
+    "description": "Section title for action settings"
   },
   "actionLabel": {
-    "message": "Action pour les e-mails expirés :",
-    "description": "Label pour la sélection d'action"
+    "message": "Action for expired emails:",
+    "description": "Label for action selection"
   },
   "actionDelete": {
-    "message": "Supprimer",
-    "description": "Option pour supprimer les e-mails expirés"
+    "message": "Delete",
+    "description": "Option to delete expired emails"
   },
   "actionMove": {
-    "message": "Déplacer vers un dossier",
-    "description": "Option pour déplacer les e-mails expirés"
+    "message": "Move to folder",
+    "description": "Option to move expired emails"
   },
   "permanentDelete": {
-    "message": "Suppression définitive (sans corbeille)",
-    "description": "Option pour supprimer définitivement les e-mails"
+    "message": "Permanent deletion (skip trash)",
+    "description": "Option to permanently delete emails"
   },
   "permanentDeleteDesc": {
-    "message": "⚠️ Attention : Les e-mails seront définitivement supprimés et ne pourront pas être récupérés",
-    "description": "Avertissement pour l'option de suppression définitive"
+    "message": "⚠️ Warning: Emails will be permanently deleted and cannot be recovered",
+    "description": "Warning for permanent deletion option"
   },
   "targetFolderLabel": {
-    "message": "Dossier de destination :",
-    "description": "Label pour la sélection du dossier cible"
+    "message": "Target folder:",
+    "description": "Label for target folder selection"
   },
   "selectFolder": {
-    "message": "-- Sélectionnez un dossier --",
-    "description": "Placeholder pour la sélection de dossier"
+    "message": "-- Select a folder --",
+    "description": "Placeholder for folder selection"
   },
   "refreshFolders": {
-    "message": "Actualiser les dossiers",
-    "description": "Bouton pour actualiser la liste des dossiers"
+    "message": "Refresh folders",
+    "description": "Button to refresh folder list"
   },
   "checkSettings": {
-    "message": "Paramètres de Vérification",
-    "description": "Titre de section pour les paramètres de vérification"
+    "message": "Check Settings",
+    "description": "Section title for check settings"
   },
   "checkOnStartup": {
-    "message": "Vérifier au démarrage de Thunderbird",
-    "description": "Label pour l'option de vérification au démarrage"
+    "message": "Check on Thunderbird startup",
+    "description": "Label for check on startup option"
   },
   "periodicCheck": {
-    "message": "Activer les vérifications périodiques",
-    "description": "Label pour l'option de vérification périodique"
+    "message": "Enable periodic checks",
+    "description": "Label for periodic check option"
   },
   "checkIntervalLabel": {
-    "message": "Vérifier toutes les (minutes) :",
-    "description": "Label pour l'intervalle de vérification"
+    "message": "Check every (minutes):",
+    "description": "Label for check interval"
   },
   "accountSelection": {
-    "message": "Sélection des Comptes",
-    "description": "Titre de section pour la sélection de comptes"
+    "message": "Account Selection",
+    "description": "Section title for account selection"
   },
   "accountSelectionDesc": {
-    "message": "Laissez vide pour vérifier tous les comptes, ou sélectionnez des comptes spécifiques",
-    "description": "Description de la sélection de comptes"
+    "message": "Leave empty to check all accounts, or select specific accounts to check",
+    "description": "Description for account selection"
   },
   "loadingAccounts": {
-    "message": "Chargement des comptes...",
-    "description": "Message de chargement des comptes"
+    "message": "Loading accounts...",
+    "description": "Loading message for accounts"
   },
   "noAccountsFound": {
-    "message": "Aucun compte trouvé",
-    "description": "Message quand aucun compte n'est trouvé"
+    "message": "No accounts found",
+    "description": "Message when no accounts are found"
   },
   "refreshAccountList": {
-    "message": "Actualiser la liste des comptes",
-    "description": "Bouton pour actualiser la liste des comptes"
+    "message": "Refresh account list",
+    "description": "Button to refresh account list"
   },
   "folderSelection": {
-    "message": "Sélection des Dossiers",
-    "description": "Titre de section pour la sélection de dossiers"
+    "message": "Folder Selection",
+    "description": "Section title for folder selection"
   },
   "folderSelectionDesc": {
-    "message": "Laissez vide pour vérifier tous les dossiers, ou sélectionnez des dossiers spécifiques",
-    "description": "Description de la sélection de dossiers"
+    "message": "Leave empty to check all folders, or select specific folders to check",
+    "description": "Description for folder selection"
   },
   "selectAllFolders": {
-    "message": "Tout sélectionner",
-    "description": "Bouton pour sélectionner tous les dossiers"
+    "message": "Select all folders",
+    "description": "Button to select all folders"
   },
   "deselectAllFolders": {
-    "message": "Tout désélectionner",
-    "description": "Bouton pour désélectionner tous les dossiers"
+    "message": "Deselect all folders",
+    "description": "Button to deselect all folders"
   },
   "loadingFolders": {
-    "message": "Chargement des dossiers...",
-    "description": "Message de chargement des dossiers"
+    "message": "Loading folders...",
+    "description": "Loading message for folders"
   },
   "noFoldersFound": {
-    "message": "Aucun dossier trouvé",
-    "description": "Message quand aucun dossier n'est trouvé"
+    "message": "No folders found",
+    "description": "Message when no folders are found"
   },
   "refreshFolderList": {
-    "message": "Actualiser la liste des dossiers",
-    "description": "Bouton pour actualiser la liste des dossiers"
+    "message": "Refresh folder list",
+    "description": "Button to refresh folder list"
   },
   "activityLogs": {
-    "message": "Journal d'Activité",
-    "description": "Titre de section pour le journal d'activité"
+    "message": "Activity Logs",
+    "description": "Section title for activity logs"
   },
   "clearLogs": {
-    "message": "Effacer les journaux",
-    "description": "Bouton pour effacer les journaux"
+    "message": "Clear logs",
+    "description": "Button to clear logs"
   },
   "exportLogs": {
-    "message": "Exporter les journaux",
-    "description": "Bouton pour exporter les journaux"
+    "message": "Export logs",
+    "description": "Button to export logs"
   },
   "noLogs": {
-    "message": "Aucun journal disponible",
-    "description": "Message quand aucun journal n'existe"
+    "message": "No logs available",
+    "description": "Message when no logs exist"
   },
   "logAction": {
     "message": "Action",
-    "description": "Champ de journal : type d'action"
+    "description": "Log field: action type"
   },
   "logChecked": {
-    "message": "E-mails vérifiés",
-    "description": "Champ de journal : e-mails vérifiés"
+    "message": "Emails checked",
+    "description": "Log field: emails checked"
   },
   "logExpired": {
-    "message": "Expirés trouvés",
-    "description": "Champ de journal : e-mails expirés trouvés"
+    "message": "Expired found",
+    "description": "Log field: expired emails found"
   },
   "logProcessed": {
-    "message": "Traités",
-    "description": "Champ de journal : e-mails traités"
+    "message": "Processed",
+    "description": "Log field: emails processed"
   },
   "logErrors": {
-    "message": "Erreurs",
-    "description": "Champ de journal : erreurs"
+    "message": "Errors",
+    "description": "Log field: errors"
   },
   "saveSettings": {
-    "message": "Enregistrer les Paramètres",
-    "description": "Bouton pour enregistrer les paramètres"
+    "message": "Save Settings",
+    "description": "Button to save settings"
   },
   "settingsSaved": {
-    "message": "✓ Paramètres enregistrés avec succès",
-    "description": "Message de confirmation d'enregistrement"
+    "message": "✓ Settings saved successfully",
+    "description": "Confirmation message for saved settings"
   },
   "confirmClearLogs": {
-    "message": "Êtes-vous sûr de vouloir effacer tous les journaux ? Cette action est irréversible.",
-    "description": "Message de confirmation pour effacer les journaux"
+    "message": "Are you sure you want to clear all logs? This action cannot be undone.",
+    "description": "Confirmation message for clearing logs"
   },
   "statusLabel": {
-    "message": "Statut",
-    "description": "Label pour le statut dans la popup"
+    "message": "Status",
+    "description": "Label for status in popup"
   },
   "lastCheckLabel": {
-    "message": "Dernière vérification",
-    "description": "Label pour la dernière vérification dans la popup"
+    "message": "Last check",
+    "description": "Label for last check time in popup"
   },
   "runCheckNow": {
-    "message": "Lancer la Vérification",
-    "description": "Bouton pour lancer une vérification manuelle"
+    "message": "Run Check Now",
+    "description": "Button to run check manually"
   },
   "checkingEmails": {
-    "message": "Vérification des e-mails...",
-    "description": "Message de progression pendant la vérification"
+    "message": "Checking emails...",
+    "description": "Progress message while checking"
   },
   "resultChecked": {
-    "message": "Vérifiés",
-    "description": "Label de résultat : e-mails vérifiés"
+    "message": "Checked",
+    "description": "Result label: emails checked"
   },
   "resultExpired": {
-    "message": "Expirés",
-    "description": "Label de résultat : expirés trouvés"
+    "message": "Expired",
+    "description": "Result label: expired found"
   },
   "resultProcessed": {
-    "message": "Traités",
-    "description": "Label de résultat : e-mails traités"
+    "message": "Processed",
+    "description": "Result label: emails processed"
   },
   "openSettings": {
-    "message": "Ouvrir les Paramètres",
-    "description": "Lien pour ouvrir la page de paramètres"
+    "message": "Open Settings",
+    "description": "Link to open settings page"
   },
   "statusEnabled": {
-    "message": "Activée",
-    "description": "Statut : extension activée"
+    "message": "Enabled",
+    "description": "Status: extension is enabled"
   },
   "statusDisabled": {
-    "message": "Désactivée",
-    "description": "Statut : extension désactivée"
+    "message": "Disabled",
+    "description": "Status: extension is disabled"
   },
   "never": {
-    "message": "Jamais",
-    "description": "Temps : jamais"
+    "message": "Never",
+    "description": "Time: never"
   },
   "justNow": {
-    "message": "À l'instant",
-    "description": "Temps : à l'instant"
+    "message": "Just now",
+    "description": "Time: just now"
   },
   "minutesAgo": {
-    "message": "Il y a $1 minutes",
-    "description": "Temps : il y a X minutes",
+    "message": "$1 minutes ago",
+    "description": "Time: X minutes ago",
     "placeholders": {
       "1": {
         "content": "$1",
@@ -258,8 +258,8 @@
     }
   },
   "hoursAgo": {
-    "message": "Il y a $1 heures",
-    "description": "Temps : il y a X heures",
+    "message": "$1 hours ago",
+    "description": "Time: X hours ago",
     "placeholders": {
       "1": {
         "content": "$1",
@@ -268,8 +268,8 @@
     }
   },
   "daysAgo": {
-    "message": "Il y a $1 jours",
-    "description": "Temps : il y a X jours",
+    "message": "$1 days ago",
+    "description": "Time: X days ago",
     "placeholders": {
       "1": {
         "content": "$1",
@@ -278,12 +278,12 @@
     }
   },
   "checkFailed": {
-    "message": "Vérification échouée",
-    "description": "Message d'erreur quand la vérification échoue"
+    "message": "Check failed",
+    "description": "Error message when check fails"
   },
   "notificationComplete": {
-    "message": "Vérification terminée : $1 sur $2 e-mails expirés traités (sur $3 vérifiés au total)",
-    "description": "Notification quand la vérification est terminée",
+    "message": "Check complete: $1 of $2 expired emails processed (out of $3 total checked)",
+    "description": "Notification when check is complete",
     "placeholders": {
       "1": {
         "content": "$1",
@@ -300,8 +300,8 @@
     }
   },
   "notificationDryRun": {
-    "message": "Simulation terminée : $1 e-mails expirés trouvés (sur $2 vérifiés au total)",
-    "description": "Notification pour la simulation",
+    "message": "Dry run complete: $1 expired emails found (out of $2 total checked)",
+    "description": "Notification for dry run",
     "placeholders": {
       "1": {
         "content": "$1",
@@ -314,51 +314,51 @@
     }
   },
   "aboutTitle": {
-    "message": "À propos d'Email Expiration Manager",
-    "description": "Titre de la section à propos"
+    "message": "About Email Expiration Manager",
+    "description": "Title for about section"
   },
   "aboutInitiativeTitle": {
-    "message": "🌱 L'Initiative de l'En-tête Expires",
-    "description": "Titre de la sous-section initiative"
+    "message": "🌱 The Expires Header Initiative",
+    "description": "Title for initiative subsection"
   },
   "aboutInitiativeText": {
-    "message": "L'en-tête \"Expires\" des e-mails fait partie d'une initiative environnementale plus large visant à réduire l'empreinte carbone du stockage des e-mails. Les centres de données stockant des milliards d'e-mails dans le monde consomment d'énormes quantités d'énergie. De nombreux e-mails ont une date d'expiration naturelle mais restent stockés indéfiniment, consommant inutilement des ressources.",
-    "description": "Description de l'initiative"
+    "message": "The \"Expires\" email header is part of a broader environmental initiative to reduce the carbon footprint of email storage. Data centers storing billions of emails worldwide consume massive amounts of energy. Many emails have a natural expiration date but remain stored indefinitely, unnecessarily consuming resources.",
+    "description": "Initiative description"
   },
   "aboutZeroCarbonTitle": {
     "message": "Zero Carbon Email",
-    "description": "Titre de la section Zero Carbon"
+    "description": "Title for Zero Carbon section"
   },
   "aboutZeroCarbonText": {
-    "message": "L'initiative Zero Carbon Email rassemble des fournisseurs de messagerie, des éditeurs de logiciels et des défenseurs de l'environnement pour résoudre ce problème. En introduisant un en-tête \"Expires\" standardisé, les expéditeurs d'e-mails peuvent indiquer quand leurs messages ne sont plus nécessaires.",
-    "description": "Description Zero Carbon"
+    "message": "The Zero Carbon Email initiative brings together email service providers, software vendors, and environmental advocates to address this issue. By introducing a standardized \"Expires\" header, email senders can indicate when their messages are no longer needed.",
+    "description": "Zero Carbon description"
   },
   "aboutStandardizationTitle": {
-    "message": "Standardisation (RFC IETF)",
-    "description": "Titre de la section standardisation"
+    "message": "Standardization (IETF RFC)",
+    "description": "Title for standardization section"
   },
   "aboutStandardizationText": {
-    "message": "L'en-tête \"Expires\" est actuellement en cours de standardisation par l'Internet Engineering Task Force (IETF). Le projet de spécification : draft-ietf-mailmaint-expires",
-    "description": "Description de la standardisation"
+    "message": "The \"Expires\" header is currently being standardized through the Internet Engineering Task Force (IETF). The draft specification: draft-ietf-mailmaint-expires",
+    "description": "Standardization description"
   },
   "aboutExtensionTitle": {
-    "message": "Rôle de Cette Extension",
-    "description": "Titre de la section rôle de l'extension"
+    "message": "This Extension's Role",
+    "description": "Title for extension role section"
   },
   "aboutExtensionText": {
-    "message": "Email Expiration Manager implémente ce standard émergent dans Thunderbird, vous permettant de traiter automatiquement les e-mails selon les dates d'expiration définies par l'expéditeur. En utilisant cette extension, vous participez à rendre les e-mails plus durables sur le plan environnemental.",
-    "description": "Description du rôle de l'extension"
+    "message": "Email Expiration Manager implements this emerging standard in Thunderbird, allowing you to automatically process emails according to sender-defined expiration dates. By using this extension, you're participating in making email more environmentally sustainable.",
+    "description": "Extension role description"
   },
   "aboutLicense": {
-    "message": "Licence :",
-    "description": "Label de licence"
+    "message": "License:",
+    "description": "License label"
   },
   "aboutSource": {
-    "message": "Code Source :",
-    "description": "Label de code source"
+    "message": "Source Code:",
+    "description": "Source code label"
   },
   "aboutDevelopedBy": {
-    "message": "Développé par :",
-    "description": "Label développé par"
+    "message": "Developed by:",
+    "description": "Developed by label"
   }
 }
