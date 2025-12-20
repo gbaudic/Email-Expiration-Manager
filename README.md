@@ -8,6 +8,7 @@ A Thunderbird extension that automatically manages emails with expiration dates 
 ## 🌟 Features
 
 - ✅ **Automatic Detection**: Identifies emails with "Expires" headers
+- 🔧 **Custom Expiration Dates**: No expiration date set? Just add your own!
 - 🗑️ **Flexible Actions**: Choose to delete or move expired emails
 - 🔄 **Multiple Check Options**: Manual, startup, or periodic checks
 - 🎯 **Folder Selection**: Check all folders or select specific ones
@@ -95,6 +96,12 @@ Test the extension without making changes:
 email-expiration-manager/
 ├── manifest.json              # Extension manifest
 ├── background.js              # Core logic and message handling
+├── date_picker/
+│   ├── date_picker.html      # Date selection popup HTML
+│   ├── date_picker.js        # Popup logic
+│   └── date_picker.css       # Popup styles
+├── modules/
+│   ├── custom_expiration.js  # Common code for user-selected expiration date
 ├── options/
 │   ├── options.html          # Settings page HTML
 │   ├── options.js            # Settings page logic
@@ -128,6 +135,7 @@ email-expiration-manager/
 - **browser.notifications**: Display notifications
 - **browser.alarms**: Schedule periodic checks
 - **browser.i18n**: Internationalization
+- **browser.messages.tags**: Implement custom expiration date through tags
 
 ### Adding New Languages
 
@@ -157,9 +165,17 @@ email-expiration-manager/
 - Triggers manual checks
 - Shows check results
 
+#### date_picker.js
+- Date selection logic
+- Displays current selected date
+- Allows to pick any date
+
+#### custom_expiration.js
+- Common code for tagging the emails
+
 ## 🔍 How It Works
 
-1. **Email Detection**: The extension scans emails for the "Expires" header
+1. **Email Detection**: The extension scans emails for the "Expires" header or for its own date tags
 2. **Date Parsing**: Parses RFC 5322 date format (e.g., "Tue, 20 Aug 2024 14:18:31 -0000")
 3. **Expiration Check**: Compares the expiration date with the current date
 4. **Action**: If expired:
@@ -173,9 +189,13 @@ email-expiration-manager/
 - `messagesRead`: Read email content and headers
 - `messagesMove`: Move emails to folders
 - `messagesDelete`: Delete expired emails
+- `messagesUpdate`: Set expiration date on messages by tagging them
+- `messagesTags`: Create and delete tags
+- `messagesTagsList`: List existing tags to reuse them if applicable
 - `storage`: Save settings and logs
 - `notifications`: Display completion notifications
 - `alarms`: Schedule periodic checks
+- `menus`: Add action to context menu
 
 ## 🐛 Debugging
 

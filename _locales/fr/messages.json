@@ -360,5 +360,51 @@
   "aboutDevelopedBy": {
     "message": "Développé par :",
     "description": "Label développé par"
+  },
+  "setExpiryDate": {
+    "message": "Fixer la date d'expiration",
+    "description": "Texte de l'action pour forcer une date d'expiration"
+  },
+  "saveDate": {
+    "message": "Enregistrer",
+    "description": "Bouton pour enregistrer la date"
+  },
+  "cancelDate": {
+    "message": "Annuler",
+    "description": "Bouton pour fermer la popup de choix de date"
+  },
+  "captionDate": {
+    "message": "Choisir la date d'expiration :",
+    "description": "Label de la popup de choix de date"
+  },
+  "noneDate": {
+    "message": "Aucune",
+    "description": "Pas d'expiration"
+  },
+  "oneDayDate": {
+    "message": "1 jour",
+    "description": "Expiration dans 1 jour"
+  },
+  "oneWeekDate": {
+    "message": "1 semaine",
+    "description": "Expiration dans 1 semaine"
+  },
+  "oneMonthDate": {
+    "message": "1 mois",
+    "description": "Expiration dans 1 mois"
+  },
+  "customDate": {
+    "message": "Personnalisée :",
+    "description": "Expiration à une date choisie par l'utilisateur"
+  },
+  "expiryTag": {
+    "message": "Expire le $1",
+    "description": "Texte pour l'étiquette de message",
+    "placeholders": {
+      "1": {
+        "content": "$1",
+        "example": "04/01/2026"
+      }
+    }
   }
 }
