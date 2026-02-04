@@ -54,6 +54,7 @@ let allAccounts = [];
 let allFolders = [];
 let selectedAccounts = [];
 let selectedFolders = [];
+let perMailboxActions = new Map();
 
 /**
  * Localize all UI elements
@@ -108,27 +109,97 @@ async function populateAccountList() {
     checkbox.value = account.id;
     checkbox.checked = selectedAccounts.includes(account.id);
     
-    checkbox.addEventListener('change', async (e) => {
-      if (e.target.checked) {
-        selectedAccounts.push(account.id);
-      } else {
-        selectedAccounts = selectedAccounts.filter(id => id !== account.id);
-      }
-      // Refresh folder list when account selection changes
-      await populateFolderList();
-    });
-    
     const label = document.createElement('label');
     label.htmlFor = `account-${account.id}`;
     label.textContent = account.name;
     
+    item.appendChild(checkbox);
+    item.appendChild(label);
+    
+    // Create radio buttons
+    const options = [
+      { label: browser.i18n.getMessage('actionDefault'), value: 'default' },
+      { label: browser.i18n.getMessage('actionDelete'), value: 'delete' },
+      { label: browser.i18n.getMessage('actionMove'), value: 'move' }
+    ];
+
+    options.forEach(opt => {
+      const wrapper = document.createElement('div');
+
+      const radio = document.createElement('input');
+      radio.type = 'radio';
+      radio.name = `actionType-account-${account.id}`;   // same group
+      radio.value = opt.value;
+      radio.checked = perMailboxActions.has(account.id) && perMailboxActions.get(account.id).action === opt.value;
+      opt.ui = radio;
+
+      const label = document.createElement('label');
+      label.textContent = opt.label;
+
+      wrapper.appendChild(radio);
+      wrapper.appendChild(label);
+      item.appendChild(wrapper);
+    });
+
+    // Create dropdown
+    const dropdown = document.createElement('select');
+    dropdown.id = `folderList-account-${account.id}`;
+    
+    const option0 = document.createElement('option');
+    option0.value = '';
+    option0.textContent = browser.i18n.getMessage('selectFolder');
+    dropdown.appendChild(option0);
+    
+    // Populate it solely with folders for the current account
+    const folders = await getAllFolders(account);
+    for (const folder of folders) {
+      const option = document.createElement('option');
+      // Store the folder ID instead of path for proper API usage
+      option.value = folder.id;
+      option.setAttribute('data-path', folder.path);
+      option.textContent = '  '.repeat(folder.depth) + folder.name;
+      dropdown.appendChild(option);
+    }
+    dropdown.value = perMailboxActions.has(account.id) && perMailboxActions.get(account.id).folder ? perMailboxActions.get(account.id).folder : '';
+    
+    const radios = options.map((opt) => opt.ui);
+    
+    dropdown.addEventListener('change', () => {
+        perMailboxActions.getOrInsert(account.id, {}).folder = dropdown.value;
+    });
+
+    // Enable/disable everything when checkbox changes
+    checkbox.addEventListener('change', async (e) => {
+      const enabled = e.target.checked;
+      if (enabled) {
+        selectedAccounts.push(account.id);
+      } else {
+        selectedAccounts = selectedAccounts.filter(id => id !== account.id);
+      }
+      
+      radios.forEach(r => r.disabled = !enabled);
+      
+      dropdown.disabled = !(enabled && document.querySelector(`input[name='actionType-account-${account.id}']:checked`)?.value === 'move');
+      
+      // Refresh folder list when account selection changes
+      await populateFolderList();
+    });
+
+    // Radio button logic: dropdown enabled only when "move" is selected
+    radios.forEach(radio => {
+      radio.addEventListener('change', () => {
+        dropdown.disabled = radio.value !== 'move';
+        perMailboxActions.getOrInsert(account.id, {}).action = radio.value;
+      });
+    });
+
     const accountType = document.createElement('span');
     accountType.className = 'account-type';
     accountType.textContent = account.type;
     
-    item.appendChild(checkbox);
-    item.appendChild(label);
+    item.appendChild(dropdown);
     item.appendChild(accountType);
+    
     elements.accountList.appendChild(item);
   }
 }
@@ -190,11 +261,18 @@ async function getAllFolders(account) {
  * Populate target folder dropdown
  */
 async function populateTargetFolders() {
+    populateTargetFoldersFor(elements.targetFolder);
+}
+
+/**
+ * Populate a target folder dropdown
+ */
+async function populateTargetFoldersFor(dropdown) {
   const folders = await loadFolders();
   
   // Clear existing options except the first one
-  while (elements.targetFolder.options.length > 1) {
-    elements.targetFolder.remove(1);
+  while (dropdown.options.length > 1) {
+    dropdown.remove(1);
   }
   
   for (const folder of folders) {
@@ -203,7 +281,7 @@ async function populateTargetFolders() {
     option.value = folder.id;
     option.setAttribute('data-path', folder.path);
     option.textContent = '  '.repeat(folder.depth) + folder.name;
-    elements.targetFolder.appendChild(option);
+    dropdown.appendChild(option);
   }
 }
 
@@ -368,6 +446,7 @@ async function loadSettings() {
     elements.logActions.checked = settings.logActions !== undefined ? settings.logActions : true;
     selectedAccounts = settings.selectedAccounts || [];
     selectedFolders = settings.selectedFolders || [];
+    perMailboxActions = settings.perMailboxActions || new Map();
   }
   
   updateUIState();
@@ -389,7 +468,8 @@ async function saveSettings() {
     showNotifications: elements.showNotifications.checked,
     logActions: elements.logActions.checked,
     selectedAccounts: selectedAccounts,
-    selectedFolders: selectedFolders
+    selectedFolders: selectedFolders,
+    perMailboxActions: perMailboxActions
   };
   
   await browser.storage.local.set({ settings });

@@ -55,6 +55,10 @@
     "message": "Action Settings",
     "description": "Section title for action settings"
   },
+  "actionSettingsDesc": {
+    "message": "This action will become the default one, it can be overridden on a per-account basis below.",
+    "description": "Section description for action settings"
+  },
   "actionLabel": {
     "message": "Action for expired emails:",
     "description": "Label for action selection"
@@ -66,6 +70,10 @@
   "actionMove": {
     "message": "Move to folder",
     "description": "Option to move expired emails"
+  },
+  "actionDefault": {
+    "message": "Default",
+    "description": "Option to follow the extension default action"
   },
   "permanentDelete": {
     "message": "Permanent deletion (skip trash)",

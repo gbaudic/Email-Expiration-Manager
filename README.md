@@ -8,7 +8,7 @@ A Thunderbird extension that automatically manages emails with expiration dates 
 ## 🌟 Features
 
 - ✅ **Automatic Detection**: Identifies emails with "Expires" headers
-- 🗑️ **Flexible Actions**: Choose to delete or move expired emails
+- 🗑️ **Flexible Actions**: Choose to delete or move expired emails, the action can be set on a per-mailbox basis if needed
 - 🔄 **Multiple Check Options**: Manual, startup, or periodic checks
 - 🎯 **Folder Selection**: Check all folders or select specific ones
 - 🧪 **Dry Run Mode**: Test without making changes

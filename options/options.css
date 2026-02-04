@@ -102,6 +102,16 @@ main {
   cursor: pointer;
 }
 
+input[type="radio"] {
+  margin-left: 5px;
+  margin-right: 3px;
+}
+
+select {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
 .setting-description {
   color: var(--text-secondary);
   font-size: 13px;
