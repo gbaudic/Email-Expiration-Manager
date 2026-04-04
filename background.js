@@ -20,6 +20,7 @@
  * Email Expiration Manager - Background Script
  * Handles all core functionality for checking and managing expired emails
  */
+import { TAG_PREFIX, updateMessageTags } from "./modules/custom_expiration.js"
 
 // Default settings
 const DEFAULT_SETTINGS = {
@@ -40,6 +41,24 @@ const DEFAULT_SETTINGS = {
 
 // Storage for logs
 let actionLogs = [];
+let selectedMessages = null;
+
+const MENU_ITEM_ID = "menu_setExpiryDate";
+
+/**
+ * Handle the menu item to set expiration date from the mail folder view
+ */
+browser.menus.onClicked.addListener(async (info, tab) => {
+  if (info.menuItemId === MENU_ITEM_ID) {
+    selectedMessages = info.selectedMessages;
+    await browser.windows.create({
+        url: "date_picker/date_picker.html?source=menu",
+        type: "popup",
+        width: 420,
+        height: 370
+    });
+  }
+});
 
 /**
  * Initialize extension on install/update
@@ -58,6 +77,13 @@ browser.runtime.onInstalled.addListener(async (details) => {
   if (!logs.logs) {
     await browser.storage.local.set({ logs: [] });
   }
+  
+  // Add menu entry to override or set custom expiration date
+  await addEntry({
+    id: MENU_ITEM_ID,
+    title: browser.i18n.getMessage("setExpiryDate"),
+    contexts: ["message_list"]
+  });
 });
 
 /**
@@ -122,6 +148,15 @@ browser.runtime.onMessage.addListener(async (message, sender) => {
       browser.alarms.clear('periodicCheck');
     }
     return { success: true };
+  } else if (message.type === "popup-data") {
+    const date = message.value;
+    if (selectedMessages) {
+      updateMessageTags(date, selectedMessages.messages);
+      while (selectedMessages.id) {
+        selectedMessages = await messenger.messages.continueList(selectedMessages.id);
+        updateMessageTags(date, selectedMessages.messages);
+      }
+    }
   }
 });
 
@@ -349,7 +384,16 @@ async function checkExpiredEmails(settings) {
             
             // Look for Expires header
             const headers = fullMessage.headers;
-            const expiresHeader = headers.expires ? headers.expires[0] : null;
+            let expiresHeader = headers.expires ? headers.expires[0] : null;
+            
+            const header = await browser.messages.get(message.id);
+            // Parse all tags if any, there should be at most one, parse date as Date
+            // If there are 2 dates set, the tag gets priority even if it is after the Expires: date
+            const eemTags = header.tags.filter(t => t.startsWith(TAG_PREFIX));
+            if (eemTags.length > 0){
+              expiresHeader = eemTags[0].substring(TAG_PREFIX.length);
+              console.log(`Using user-selected expiration date for message ${message.id}: ${expiresHeader}`);
+            }
             
             if (expiresHeader) {
               console.log(`Found Expires header in message ${message.id}: ${expiresHeader}`);
@@ -398,6 +442,23 @@ async function checkExpiredEmails(settings) {
         errors.push(`Error in folder ${folder.path}: ${err.message}`);
       }
     }
+    
+    // Tag cleanup
+    console.log('Cleaning up expiration tags');
+    let referenceDate = new Date().toISOString().substring(0, 10);
+    let existingTags = await browser.messages.tags.list();
+    existingTags.map(item => item.key)
+      .filter(key => key.startsWith(TAG_PREFIX))
+      .map(key => key.substring(TAG_PREFIX.length))
+      .filter(key => key <= referenceDate)
+      .forEach((key) => {
+        if (!settings.dryRun) {
+          browser.messages.tags.delete(key);
+          console.log(`Deleted tag ${key}`);
+        } else {
+          console.log(`DRY RUN: Would delete tag ${key}`);
+        }
+      });
     
     console.log('=== Check complete ===');
     console.log(`Total checked: ${totalChecked}`);
@@ -477,6 +538,35 @@ async function addLog(logEntry) {
   const updatedLogs = [logEntry, ...currentLogs].slice(0, 100);
   
   await browser.storage.local.set({ logs: updatedLogs });
+}
+
+/**
+ * Add a menu entry
+ */
+async function addEntry(createData) {
+  let { promise, resolve, reject } = Promise.withResolvers();
+  let error;
+  let id = browser.menus.create(createData, () => { 
+    error = browser.runtime.lastError; // Either null or an Error object.
+    if (error) {
+      reject(error)
+    } else {
+      resolve();
+    }
+  });
+
+  try {
+    await promise;
+    console.info(`Successfully created menu entry <${id}>`);
+  } catch (error) {
+    if (error.message.includes("already exists")) {
+      console.info(`The menu entry <${id}> exists already and was not added again.`);
+    } else {
+      console.error("Failed to create menu entry:", createData, error);
+    }
+  }
+
+  return id;
 }
 
 console.log('Email Expiration Manager background script loaded');
