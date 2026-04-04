@@ -1,0 +1,105 @@
+/**
+ * Email Expiration Manager - Thunderbird Extension
+ * Copyright (C) 2025 Mindbaz / Pierre-Yves Dubreucq
+ * 
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <https://www.gnu.org/licenses/>.
+ */
+
+/**
+ * Popup styles
+ */
+
+:root {
+  --primary-color: #0a84ff;
+  --success-color: #12bc00;
+  --danger-color: #d70022;
+  --border-color: #d7d7db;
+  --bg-color: #ffffff;
+  --bg-secondary: #f9f9fa;
+  --text-primary: #0c0c0d;
+  --text-secondary: #737373;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--text-primary);
+  width: 350px;
+  background-color: var(--bg-color);
+}
+
+.popup-container {
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 15px;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+main {
+  padding: 15px;
+}
+
+.action-section {
+  margin-bottom: 20px;
+  margin-top: 5px;
+}
+
+.button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.button-primary {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.button-primary:hover:not(:disabled) {
+  background-color: #0060df;
+}
+
+.button-primary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.results-container {
+  margin-top: 15px;
+  padding: 15px;
+  background-color: var(--bg-secondary);
+  border-radius: 4px;
+}

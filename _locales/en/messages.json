@@ -360,5 +360,51 @@
   "aboutDevelopedBy": {
     "message": "Developed by:",
     "description": "Developed by label"
+  },
+  "setExpiryDate": {
+    "message": "Set expiration date",
+    "description": "Action text to force an expiration date"
+  },
+  "saveDate": {
+    "message": "Save",
+    "description": "Button to save the date"
+  },
+  "cancelDate": {
+    "message": "Cancel",
+    "description": "Button to close the date selection popup"
+  },
+  "captionDate": {
+    "message": "Pick the expiration date:",
+    "description": "Label for the date selection popup"
+  },
+  "noneDate": {
+    "message": "None",
+    "description": "No expiration"
+  },
+  "oneDayDate": {
+    "message": "1 day",
+    "description": "Expiration in 1 day"
+  },
+  "oneWeekDate": {
+    "message": "1 week",
+    "description": "Expiration in 1 week"
+  },
+  "oneMonthDate": {
+    "message": "1 month",
+    "description": "Expiration in 1 month"
+  },
+  "customDate": {
+    "message": "Custom:",
+    "description": "Expiration at a user-selected date"
+  },
+  "expiryTag": {
+    "message": "Expires on $1",
+    "description": "Text for the message tag label",
+    "placeholders": {
+      "1": {
+        "content": "$1",
+        "example": "2026/01/04"
+      }
+    }
   }
 }

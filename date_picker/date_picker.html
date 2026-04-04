@@ -1,0 +1,68 @@
+<!--
+  Email Expiration Manager - Thunderbird Extension
+  Copyright (C) 2025 Mindbaz / Pierre-Yves Dubreucq
+  
+  This program is free software: you can redistribute it and/or modify
+  it under the terms of the GNU General Public License as published by
+  the Free Software Foundation, either version 3 of the License, or
+  (at your option) any later version.
+  
+  This program is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU General Public License for more details.
+  
+  You should have received a copy of the GNU General Public License
+  along with this program.  If not, see <https://www.gnu.org/licenses/>.
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title data-i18n="extensionName">Email Expiration Manager</title>
+  <link rel="stylesheet" href="date_picker.css">
+</head>
+<body>
+  <div class="popup-container">
+    <header>
+      <h1 data-i18n="extensionName">Email Expiration Manager</h1>
+    </header>
+
+    <main>
+      <p data-i18n="captionDate">Pick the expiration date:</p>
+      <div>
+        <input type="radio" id="none" value="0" name="selectedDate" />
+        <label for="none" data-i18n="noneDate">None</label>
+      </div>
+      <div>
+        <input type="radio" id="1day" value="1" name="selectedDate" />
+        <label for="1day" data-i18n="oneDayDate">1 day</label>
+      </div>
+      <div>
+        <input type="radio" id="1week" value="7" name="selectedDate" />
+        <label for="1week" data-i18n="oneWeekDate">1 week</label>
+      </div>
+      <div>
+        <input type="radio" id="1month" value="30" name="selectedDate" />
+        <label for="1month" data-i18n="oneMonthDate">1 month</label>
+      </div>
+      <div>
+        <input type="radio" id="custom" value="0" name="selectedDate" checked="true" />
+        <label for="custom" data-i18n="customDate">Custom: </label>
+        <input type="date" id="selectedDate" name="expiration" />
+      </div>
+      <div class="action-section">
+        <button id="save" class="button button-primary" data-i18n="saveDate">
+          Save
+        </button>
+        <button id="cancel" class="button" data-i18n="cancelDate">
+          Cancel
+        </button>
+      </div>
+    </main>
+  </div>
+
+  <script src="date_picker.js" type="module"></script>
+</body>
+</html>
