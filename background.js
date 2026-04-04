@@ -35,6 +35,7 @@ const DEFAULT_SETTINGS = {
   dryRun: false,
   selectedAccounts: [], // empty means all accounts
   selectedFolders: [], // empty means all folders
+  perMailboxActions: new Map(),
   logActions: true
 };
 
@@ -264,6 +265,43 @@ async function findFolderById(folderId) {
 }
 
 /**
+ * Find the account for a given folder by ID
+ * Returns the account ID
+ */
+async function findAccountForFolderById(folderId) {
+  if (!folderId) return null;
+  
+  const accounts = await browser.accounts.list();
+  
+  for (const account of accounts) {
+    const folders = await getAllFolders(account);
+    // Match by id or path for backwards compatibility
+    const found = folders.find(f => f.id === folderId || f.path === folderId);
+    if (found) {
+      return account.id;
+    }
+  }
+  
+  return null;
+}
+
+/*
+ * Check target folder for existence
+ */
+async function checkTargetFolder(action, folder) {
+  let targetFolderObj = null;
+  if (action === 'move' && folder) {
+    targetFolderObj = await findFolderById(folder);
+    if (!targetFolderObj) {
+      console.error(`Target folder not found: ${folder}`);
+    } else {
+      console.log(`Target folder found: ${targetFolderObj.path}`);
+    }
+  }
+  return targetFolderObj;
+}
+
+/**
  * Main function to check for expired emails
  * UPDATED: Fixed pagination bug and added detailed logging
  */
@@ -279,20 +317,15 @@ async function checkExpiredEmails(settings) {
   console.log('Dry run mode:', settings.dryRun);
   
   // Get the target folder object if action is 'move'
-  let targetFolderObj = null;
-  if (settings.action === 'move' && settings.targetFolder) {
-    targetFolderObj = await findFolderById(settings.targetFolder);
-    if (!targetFolderObj) {
-      console.error(`Target folder not found: ${settings.targetFolder}`);
-      return {
-        success: false,
-        error: `Target folder not found: ${settings.targetFolder}`,
-        totalChecked: 0,
-        totalExpired: 0,
-        totalProcessed: 0
-      };
-    }
-    console.log('Target folder found:', targetFolderObj.path);
+  let targetFolderObj = await checkTargetFolder(settings.action, settings.targetFolder);
+  if (settings.action === 'move' && settings.targetFolder && !targetFolderObj) {
+    return {
+      success: false,
+      error: `Target folder not found: ${settings.targetFolder}`,
+      totalChecked: 0,
+      totalExpired: 0,
+      totalProcessed: 0
+    };
   }
   
   try {
@@ -304,7 +337,23 @@ async function checkExpiredEmails(settings) {
     }
     
     for (const folder of folders) {
+      let action = settings.action;
+      let targetFolder = targetFolderObj;
+      
+      const parentAccount = await findAccountForFolderById(folder.id);
+      if (parentAccount && settings.perMailboxActions.has(parentAccount) && settings.perMailboxActions.get(parentAccount).action !== 'default') {
+        // Only override action configuration for folder if actually possible and necessary
+        action = settings.perMailboxActions.get(parentAccount).action;
+        targetFolder = await checkTargetFolder(action, settings.perMailboxActions.get(parentAccount).folder);
+        if (action === 'move' && settings.perMailboxActions.get(parentAccount).folder && !targetFolder) {
+          // Skip the folder if move is not possible
+          console.log(`Destination folder for folder ${folder.path} not found, skipping this folder`);
+          continue;
+        }
+      }
+      
       console.log(`Checking folder: ${folder.path}`);
+      console.log(`Action: ${action}, target folder (if move): ${targetFolder}`);
       
       try {
         // Get messages from folder
@@ -357,20 +406,20 @@ async function checkExpiredEmails(settings) {
                 // Process the expired email
                 if (!settings.dryRun) {
                   try {
-                    if (settings.action === 'delete') {
+                    if (action === 'delete') {
                       const deleteMode = settings.permanentDelete ? 'permanently' : 'to trash';
                       console.log(`Deleting message ${message.id} ${deleteMode}`);
                       // Use boolean for compatibility with current Thunderbird versions
                       // false = move to trash, true = permanent deletion
                       await browser.messages.delete([message.id], settings.permanentDelete);
                       totalProcessed++;
-                    } else if (settings.action === 'move' && targetFolderObj) {
-                      console.log(`Moving message ${message.id} to ${targetFolderObj.path}`);
+                    } else if (action === 'move' && targetFolder) {
+                      console.log(`Moving message ${message.id} to ${targetFolder.path}`);
                       // Use the folder object directly for the move operation
-                      await browser.messages.move([message.id], targetFolderObj);
+                      await browser.messages.move([message.id], targetFolder);
                       totalProcessed++;
                     } else {
-                      console.warn(`Cannot process message ${message.id}: action=${settings.action}, targetFolder=${settings.targetFolder}`);
+                      console.warn(`Cannot process message ${message.id}: action=${action}, targetFolder=${targetFolder.path}`);
                     }
                   } catch (err) {
                     console.error(`Failed to process message ${message.id}:`, err);
