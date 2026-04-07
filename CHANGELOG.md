@@ -5,6 +5,14 @@ All notable changes to Email Expiration Manager will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.1.0] - 2026-04-07
+
+### Added
+- ✨ Custom expiration dates: users can now set their own expiration date via tags,
+  for emails that do not have an `Expires` header (closes #1) — contributed by @gbaudic
+- ✨ Per-mailbox action configuration: each mailbox can now have a different action
+  or destination folder (closes #2) — contributed by @gbaudic
+
 ## [1.0.2] - 2025-10-14
 
 ### Fixed
@@ -105,7 +113,9 @@ Released under GNU General Public License v3.0
 ---
 
 ## Version History
-
+- **1.1.0** - Custom expiration dates and per-mailbox action configuration (2026-04-07)
+- **1.0.2** - Fix English translation (2025-10-14)
+- **1.0.1** - Spanish and German translations, About section (2025-10-13)
 - **1.0.0** - Initial public release (2025-10-08)
 
 ## Contributing
@@ -121,4 +131,7 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines on how to contribute to th
 
 ---
 
+**[1.1.0]**: https://github.com/Mindbaz/Email-Expiration-Manager/releases/tag/v1.1.0
+**[1.0.2]**: https://github.com/Mindbaz/Email-Expiration-Manager/releases/tag/v1.0.2
+**[1.0.1]**: https://github.com/Mindbaz/Email-Expiration-Manager/releases/tag/v1.0.1
 **[1.0.0]**: https://github.com/Mindbaz/Email-Expiration-Manager/releases/tag/v1.0.0
